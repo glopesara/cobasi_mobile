@@ -1,0 +1,9 @@
+[caps]
+udid = "d2be92ea"
+deviceName = "MI_8 device"
+platformName = "Android"
+deviceName = "Emulator"
+appPackage = "com.root.cobasi.Activities"
+appActivity = "com.root.cobasi.Activities.MainActivity"
+unicodeKeyboard = true
+resetKeyboard = true
