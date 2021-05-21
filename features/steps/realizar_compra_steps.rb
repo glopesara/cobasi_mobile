@@ -10,7 +10,7 @@ Dado("clico em finalizar comprar") do
   @tela_carrinho.finalizar_compra()
 end
 
-Dado("adiciono o e-mail") do
+Dado("adiciono o um novo e-mail") do
   @checkout.adicionar_email()
 end
 
