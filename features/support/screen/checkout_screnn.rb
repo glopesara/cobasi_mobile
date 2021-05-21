@@ -2,11 +2,15 @@ class CheckoutScreen
   def adicionar_email(email = "")
     if email.length > 0
       find_element(xpath: "//android.widget.EditText").send_keys(email)
-      find_element(xpath: "//android.widget.Button[@text='Continuar']").click
+      btn_continuar()
     else
       find_element(xpath: "//android.widget.EditText").send_keys(Faker::Internet.email)
-      find_element(xpath: "//android.widget.Button[@text='Continuar']").click
+      btn_continuar()
     end
+  end
+
+  def btn_continuar
+    find_element(xpath: "//android.widget.Button[@text='Continuar']").click
   end
 
   def dados_pessoais_form

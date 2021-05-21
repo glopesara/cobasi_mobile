@@ -14,6 +14,10 @@ Dado("adiciono o e-mail") do
   @checkout.adicionar_email()
 end
 
+Dado("clico em cotinuar") do
+  @checkout.btn_continuar()
+end
+
 Dado("submeto o formulario da dados pessoais") do
   @checkout.dados_pessoais_form()
 end

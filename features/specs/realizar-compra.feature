@@ -26,6 +26,7 @@ Funcionalidade: Fluxo de compras
             E clico em ver carrinho no alerta
             E clico em finalizar comprar
             E adiciono o e-mail "testes@testes.com"
+            E clico em cotinuar
             E clico em ir para entrega
             E seleciono o frete Economica
             E seleciono a  forma de pagamento como Boleto Bancário
