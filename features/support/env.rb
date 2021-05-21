@@ -1,7 +1,8 @@
 require "allure-cucumber"
 require "appium_lib"
-
 require "fileutils"
+require "cpf_cnpj"
+require "faker"
 
 # Limpa os logs e os screenshots
 FileUtils.rm_f(Dir.glob("logs/*.json"))

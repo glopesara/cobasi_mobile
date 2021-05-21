@@ -1,13 +1,18 @@
 class CheckoutScreen
-  def adicionar_email
-    find_element(xpath: "//android.widget.EditText").send_keys("testes@teestes.com.br")
-    find_element(xpath: "//android.widget.Button[@text='Continuar']").click
+  def adicionar_email(email = "")
+    if email.length > 0
+      find_element(xpath: "//android.widget.EditText").send_keys(email)
+      find_element(xpath: "//android.widget.Button[@text='Continuar']").click
+    else
+      find_element(xpath: "//android.widget.EditText").send_keys(Faker::Internet.email)
+      find_element(xpath: "//android.widget.Button[@text='Continuar']").click
+    end
   end
 
   def dados_pessoais_form
-    find_element(xpath: "//android.widget.EditText[@resource-id='firstName']").send_keys("teste")
-    find_element(xpath: "//android.widget.EditText[@resource-id='lastName']").send_keys("teste")
-    find_element(xpath: "//android.widget.EditText[@resource-id='document']").send_keys("946.543.290-30")
+    find_element(xpath: "//android.widget.EditText[@resource-id='firstName']").send_keys(Faker::Name.male_first_name)
+    find_element(xpath: "//android.widget.EditText[@resource-id='lastName']").send_keys(Faker::Name.last_name)
+    find_element(xpath: "//android.widget.EditText[@resource-id='document']").send_keys(CPF.generate)
     find_element(xpath: "//android.widget.EditText[@resource-id='phone']").send_keys("11966484848")
     find_element(xpath: "//android.widget.Button[@text='Salvar']").click
   end

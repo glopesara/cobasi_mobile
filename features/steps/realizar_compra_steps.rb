@@ -22,7 +22,7 @@ Dado("submeto o formulario de endereço") do
   @checkout.edereco_form()
 end
 
-Dado("clicar em ir para entrega") do
+Dado("clico em ir para entrega") do
   @checkout.entrega_btn()
 end
 
@@ -33,11 +33,15 @@ end
 Dado("seleciono a  forma de pagamento como Boleto Bancário") do
   @checkout.pagamento_boleto()
 end
-Dado("clicar em finalizar pedido") do
+Dado("clico em finalizar pedido") do
   @checkout.finalizar_pedido()
 end
 
 Então("devo ver a tela de pedido realizado com sucusso") do
   resultado = find_element(xpath: "//android.view.View[contains(@text, 'Pedido n')]")
   expect(resultado.displayed?).to be true
+end
+
+Dado("adiciono o e-mail {string}") do |email|
+  @checkout.adicionar_email(email)
 end
