@@ -1,5 +1,5 @@
 class LoginScreen
-  def selecinar_opcao(opcao)
+  def selecionar_opcao(opcao)
     case opcao
     when "E-mail e senha"
       find_element(xpath: "//android.widget.TextView[@text='Digite seus dados']").click

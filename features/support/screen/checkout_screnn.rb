@@ -35,6 +35,17 @@ class CheckoutScreen
     find_element(xpath: "//android.widget.Button[@text='Ok']").click
   end
 
+  def cartao_form
+    find_element(xpath: "//android.widget.EditText[@resource-id='cardNumber']").send_keys("5441994163718802")
+    find_element(xpath: "//android.widget.EditText[@resource-id='cardVerificationValue']").send_keys("123")
+    find_element(xpath: "//android.widget.EditText[@resource-id='cardOwnerName']").send_keys("Teste Teste")
+    find_element(xpath: "//android.widget.EditText[@resource-id='cardOwnerCPF']").send_keys("84885087350")
+    find_element(xpath: "//android.widget.EditText[@resource-id='cardValidityDate']").send_keys("0322")
+    scrool = { start_x: 0.46, start_y: 0.73, offset_x: 0.46, offset_y: 0.37, duration: 2000 }
+    Appium::TouchAction.new.swipe(scrool).perform
+    find_element(xpath: "//android.widget.Button[@text='Continuar para revisão']").click
+  end
+
   def entrega_btn
     find_element(xpath: "//android.widget.Button[@text='Ir para entrega']").click
   end
@@ -45,6 +56,10 @@ class CheckoutScreen
       find_element(xpath: "//android.widget.TextView[@text='Economica']").click
       pagamento_btn()
     end
+  end
+
+  def btn_adc_cartao
+    find_element(xpath: "//android.view.View[@content-desc='Adicionar cartão de crédito']").click
   end
 
   def pagamento_btn

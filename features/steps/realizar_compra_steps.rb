@@ -49,3 +49,11 @@ end
 Dado("adiciono o e-mail {string}") do |email|
   @checkout.adicionar_email(email)
 end
+
+Dado("clico em adicionar um cartão de credito") do
+  @checkout.btn_adc_cartao()
+end
+
+Dado("submeta o formulario de cartão de credito") do
+  @checkout.cartao_form()
+end
