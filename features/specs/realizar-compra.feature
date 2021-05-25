@@ -15,8 +15,8 @@ Funcionalidade: Fluxo de compras
             E clico em ir para entrega
             E seleciono o frete Economica
             E seleciono a  forma de pagamento como Boleto Bancário
-        #     E clico em finalizar pedido
-        # Então devo ver a tela de pedido realizado com sucusso
+            E clico em finalizar pedido
+        Então devo ver a tela de pedido realizado com sucusso
         @cartão
         Cenario: Realizar compra com Cartão de credito usuario novo
         Dado que eu realize a seguinte busca
@@ -47,5 +47,5 @@ Funcionalidade: Fluxo de compras
             E clico em ir para entrega
             E seleciono o frete Economica
             E seleciono a  forma de pagamento como Boleto Bancário
-        #     E clico em finalizar pedido
-        # Então devo ver a tela de pedido realizado com sucusso
+            E clico em finalizar pedido
+        Então devo ver a tela de pedido realizado com sucusso
