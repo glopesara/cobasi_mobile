@@ -17,29 +17,33 @@ Então("tenho que ver o quadro de pontos") do
 end
 
 Dado("selecione faça a desão gratuita aqui") do
-  find_element(xpath: "//android.widget.TextView[@text='Faça sua adesão gratuita aqui']").click
+  @modal_amigo_cobasi.modal_home()
 end
 
 Dado("aceite os termos") do
-  #checbok está com bug
-  # find_element(xpath: "//android.widget.CheckBox").click
-  find_element(xpath: "//android.view.ViewGroup[@index='17']").click
+  @modal_amigo_cobasi.aceite_termos()
 end
 
 Dado("clicar em fazer adesão") do
-  find_element(xpath: "//android.widget.CheckBox[@checked='true']")
-  find_element(xpath: "//android.widget.Button").click
+  @modal_amigo_cobasi.realizar_adesao()
 end
 
 Dado("seleciono um desconto para ser resgatado") do
-  find_element(xpath: "//android.widget.TextView[@text='Seus pontos']")
-  scrool = { start_x: 0.46, start_y: 0.49, offset_x: 0.46, offset_y: 0.80, duration: 2000 }
-  Appium::TouchAction.new.swipe(scrool).perform
-  descontos = find_elements(xpath: "//android.widget.CheckBox[@clickable='true']")
-  descontos[1].click
+  @amigo_cobasi.selecionar_ponto()
 end
 
 Dado("faço o swipe para ir para tela de confirmação dos pontos") do
-  swipe = { start_x: 276, start_y: 1826, end_x: 467, end_y: 1826, duration: 2000 }
-  Appium::TouchAction.new.swipe(swipe).perform
+  @amigo_cobasi.swipe()
+end
+
+Dado("verifico que o desconto amigo cobasi esteja aplicado") do
+  @tela_carrinho.desconto_amigo_cobasi()
+end
+
+Dado("vou para tela de endereço") do
+  @tela_carrinho.btn_finalizar()
+end
+
+Dado("seleciono o frete Expressa") do
+  @checkout.selecionar_entrega("Expressa")
 end

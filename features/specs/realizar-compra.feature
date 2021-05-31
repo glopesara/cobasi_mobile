@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Fluxo de compras
-
+    @compra
     Cenario: Realizar compra com Bolteto usuario novo
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |

@@ -6,6 +6,8 @@ Before do
   @tela_produto = ProdutoScreen.new
   @tela_carrinho = CarrinhoScreen.new
   @checkout = CheckoutScreen.new
+  @amigo_cobasi = AmigoCobasiScreen.new
+  @modal_amigo_cobasi = ModalAmigoCobasi.new
   #sobe o servidor do appium
   driver.start_driver
   #timeout de 10 segundos

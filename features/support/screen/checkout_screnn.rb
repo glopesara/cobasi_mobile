@@ -47,19 +47,49 @@ class CheckoutScreen
   end
 
   def entrega_btn
+    find_element(xpath: "//android.view.View[contains(@text,'Mantenha seus')]")
+    scroll_btn_entrega()
+  end
+
+  def scroll_btn_entrega
+    ignorar_timeout()
+    begin
+      btn = find_element(xpath: "//android.widget.Button[@text='Ir para entrega']").displayed?
+    rescue
+      btn = false
+    end
+    if btn == false
+      scrool = { start_x: 0.46, start_y: 0.80, offset_x: 0.46, offset_y: 0.10, duration: 2000 }
+      Appium::TouchAction.new.swipe(scrool).perform
+      clcik_btn_entrega()
+    else
+      clcik_btn_entrega()
+    end
+    voltar_timeout()
+  end
+
+  def clcik_btn_entrega
     find_element(xpath: "//android.widget.Button[@text='Ir para entrega']").click
   end
 
-  def selecionar_entrega(frete)
-    case frete
-    when "Economica"
-      find_element(xpath: "//android.widget.TextView[@text='Economica']").click
-      pagamento_btn()
+  def scroll_btn_frete
+    ignorar_timeout()
+    begin
+      btn = find_element(xpath: "//android.widget.Button[@text='Ir para pagamento']").displayed?
+    rescue
+      btn = false
     end
+    if btn == false
+      scrool = { start_x: 0.46, start_y: 0.80, offset_x: 0.46, offset_y: 0.10, duration: 2000 }
+      Appium::TouchAction.new.swipe(scrool).perform
+    end
+    voltar_timeout()
   end
 
-  def btn_adc_cartao
-    find_element(xpath: "//android.view.View[@content-desc='Adicionar cartão de crédito']").click
+  def selecionar_entrega(frete)
+    find_element(xpath: "//android.widget.TextView[@text='#{frete}']").click
+    scroll_btn_frete()
+    pagamento_btn()
   end
 
   def pagamento_btn
@@ -67,8 +97,27 @@ class CheckoutScreen
     find_element(xpath: "//android.widget.Button[@text='Ir para pagamento']").click
   end
 
+  def btn_adc_cartao
+    find_element(xpath: "//android.widget.TextView[@text='Cartão de crédito']").click
+  end
+
+  def scroll_btn_revisao
+    ignorar_timeout()
+    begin
+      btn = find_element(xpath: "//android.widget.Button[@text='Continuar para revisão']").displayed?
+    rescue
+      btn = false
+    end
+    if btn == false
+      scrool = { start_x: 0.46, start_y: 0.80, offset_x: 0.46, offset_y: 0.10, duration: 2000 }
+      Appium::TouchAction.new.swipe(scrool).perform
+    end
+    voltar_timeout()
+  end
+
   def pagamento_boleto
     find_element(xpath: "//android.widget.TextView[@text='Boleto Bancário']").click
+    scroll_btn_revisao()
     find_element(xpath: "//android.widget.Button[@text='Continuar para revisão']").click
   end
 
@@ -77,5 +126,13 @@ class CheckoutScreen
     scrool = { start_x: 0.46, start_y: 0.89, offset_x: 0.46, offset_y: 0.13, duration: 2000 }
     Appium::TouchAction.new.swipe(scrool).perform
     find_element(xpath: "//android.widget.Button[@text='Finalizar pedido']").click
+  end
+
+  def ignorar_timeout
+    driver.manage.timeouts.implicit_wait = 3
+  end
+
+  def voltar_timeout
+    driver.manage.timeouts.implicit_wait = 30
   end
 end

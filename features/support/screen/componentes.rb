@@ -15,3 +15,20 @@ class Navegador
     autocomplete.click
   end
 end
+
+class ModalAmigoCobasi
+  def modal_home
+    find_element(xpath: "//android.widget.TextView[@text='Faça sua adesão gratuita aqui']").click
+  end
+
+  def aceite_termos
+    #checbok está com bug
+    # find_element(xpath: "//android.widget.CheckBox").click
+    find_element(xpath: "//android.view.ViewGroup[@index='17']").click
+  end
+
+  def realizar_adesao
+    find_element(xpath: "//android.widget.CheckBox[@checked='true']")
+    find_element(xpath: "//android.widget.Button").click
+  end
+end
