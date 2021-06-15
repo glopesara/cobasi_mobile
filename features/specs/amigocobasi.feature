@@ -8,7 +8,7 @@ Funcionalidade: Amigo cobasi
             E entre no menu amigo cobasi
         Então tenho que ver o quadro de pontos
     @cadastroamigocobasi
-    Cenario: Op-tin amigo Cobasi menu mais
+    Cenario: Op-tin amigo Cobasi home
         Dado que eu realize o login com
             | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400                    |

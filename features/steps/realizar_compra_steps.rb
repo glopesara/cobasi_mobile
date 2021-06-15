@@ -57,3 +57,23 @@ end
 Dado("submeta o formulario de cartão de credito") do
   @checkout.cartao_form()
 end
+
+Dado("seleciono o o agendamento da entrega para o dia {int}") do |data|
+  @checkout.selecionar_entrega("Entrega agendada").click
+  #codigo a baixo usar somente se for receber o dia.
+  #fazer um refatoramento utilizando o break para não ficar em loop caso não ache a data
+  @dia = find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").enabled?
+  if @dia == false
+    while @dia == false
+      find_element(xpath: "//android.widget.Button[@text='›']").click
+      condicao = find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").enabled?
+      if condicao == true
+        @dia = true
+        find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").click
+      end
+    end
+  else
+    find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").click
+  end
+  @checkout.pagamento_btn()
+end

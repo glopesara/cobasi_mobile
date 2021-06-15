@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Login
-
+@smoke
     Cenario: Login com sucesso
         Dado que acesso a tela de Login
             E submeto minhas credenciais:

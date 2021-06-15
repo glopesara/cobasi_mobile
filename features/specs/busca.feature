@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Busca
-    @busca
+    @busca @smoke
     Cenario: Busca
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |

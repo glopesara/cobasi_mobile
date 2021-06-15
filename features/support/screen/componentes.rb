@@ -22,9 +22,7 @@ class ModalAmigoCobasi
   end
 
   def aceite_termos
-    #checbok está com bug
-    # find_element(xpath: "//android.widget.CheckBox").click
-    find_element(xpath: "//android.view.ViewGroup[@index='17']").click
+    find_element(xpath: "//android.widget.CheckBox").click
   end
 
   def realizar_adesao
