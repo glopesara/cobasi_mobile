@@ -7,8 +7,10 @@ class CarrinhoScreen
   end
 
   def desconto_amigo_cobasi
+    #fazer o refatoramento da validação
     find_element(xpath: "//android.widget.TextView[@text='Produtos']")
-    scrool = { start_x: 0.46, start_y: 0.80, offset_x: 0.46, offset_y: 0.10, duration: 2000 }
+    scrool = { start_x: 0.46, start_y: 2000, end_x: 0.46, end_y: 200, duration: 2000 }
+    #80 05
     Appium::TouchAction.new.swipe(scrool).perform
     find_element(xpath: "//android.widget.TextView[contains(@text, 'Amigo Cobasi')]")
     #chamar o btn_finalizar quando for para a screnn e exluir o passo de vou para tela de produto

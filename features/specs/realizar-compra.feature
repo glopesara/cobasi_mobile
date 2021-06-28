@@ -32,8 +32,8 @@ Funcionalidade: Fluxo de compras
             E seleciono o frete Economica
             E clico em adicionar um cartão de credito
             E submeta o formulario de cartão de credito
-        #     E clico em finalizar pedido
-        # Então devo ver a tela de pedido realizado com sucusso
+    #     E clico em finalizar pedido
+    # Então devo ver a tela de pedido realizado com sucusso
     @compra @smoke
     Cenario: Realizar compra com Bolteto usuario ja existente
         Dado que eu realize a seguinte busca
@@ -60,7 +60,8 @@ Funcionalidade: Fluxo de compras
             E adiciono o e-mail "teste@agendamento.com"
             E clico em cotinuar
             E clico em ir para entrega
-            E seleciono o o agendamento da entrega para o dia 3
+            # E seleciono o agendamento da entrega para o dia 3
+            E seleciono o agendamento da entrega
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso

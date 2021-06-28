@@ -13,6 +13,11 @@ Dado("acesse o meu {string}") do |string|
   @navegador.selecionar_opcao_menus("Mais")
 end
 
+Então("devo ver a mensagem {string}") do |alerta|
+  alerta = find_element(xpath: "//android.view.View[@text='#{alerta}']")
+  expect(alerta.displayed?).to be true
+end
+
 Então("deve estar logado") do
   resultado = find_element(xpath: "//android.widget.TextView[@text='Minha conta']")
   expect(resultado.displayed?).to be true

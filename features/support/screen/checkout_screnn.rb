@@ -115,6 +115,24 @@ class CheckoutScreen
     voltar_timeout()
   end
 
+  def selecionar_dia(data)
+    #codigo a baixo usar somente se for receber o dia no agendamento.
+    #fazer um refatoramento utilizando o break para não ficar em loop caso não ache a data
+    @dia = find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").enabled?
+    if @dia == false
+      while @dia == false
+        find_element(xpath: "//android.widget.Button[@text='›']").click
+        condicao = find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").enabled?
+        if condicao == true
+          @dia = true
+          find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").click
+        end
+      end
+    else
+      find_element(xpath: "//android.widget.Button[contains(@text,'#{data}')]").click
+    end
+  end
+
   def pagamento_boleto
     find_element(xpath: "//android.widget.TextView[@text='Boleto Bancário']").click
     scroll_btn_revisao()

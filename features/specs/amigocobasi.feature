@@ -1,13 +1,13 @@
 #language: pt
 Funcionalidade: Amigo cobasi
-
+    @smoke
     Cenario: Acesso a tela amigo cobasi
         Dado que eu realize o login com
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
             E entre no menu amigo cobasi
         Então tenho que ver o quadro de pontos
-    @cadastroamigocobasi
+    @cadastroamigocobasi @smoke
     Cenario: Op-tin amigo Cobasi home
         Dado que eu realize o login com
             | email | gabriel.lopes.ara@gmail.com |
@@ -16,7 +16,7 @@ Funcionalidade: Amigo cobasi
             E aceite os termos
     # E clicar em fazer adesão
     # Então tenho que ver o quadro de pontos
-    @trocadepontos
+    @trocadepontos @smoke
     Cenario: Resgate de pontos
         Dado que eu realize o login com
             | email | ftamburus@gmail.com |
@@ -38,7 +38,7 @@ Funcionalidade: Amigo cobasi
             E verifico que o desconto amigo cobasi esteja aplicado
             E vou para tela de endereço
             E clico em ir para entrega
-            E seleciono o frete Expressa
+            E seleciono o agendamento da entrega
             E seleciono a  forma de pagamento como Boleto Bancário
-        #     E clico em finalizar pedido
-        # Então devo ver a tela de pedido realizado com sucusso
+#     E clico em finalizar pedido
+# Então devo ver a tela de pedido realizado com sucusso
