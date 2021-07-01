@@ -9,6 +9,11 @@ Quando("submeto minhas credenciais:") do |table|
   @login.logar(usuario)
 end
 
+Dado("submeto minhas credenciais de tentativa de login:") do |table|
+  usuario = table.rows_hash
+  @login.tentativa_login(usuario)
+end
+
 Dado("acesse o meu {string}") do |string|
   @navegador.selecionar_opcao_menus("Mais")
 end
@@ -19,6 +24,6 @@ Então("devo ver a mensagem {string}") do |alerta|
 end
 
 Então("deve estar logado") do
-  resultado = find_element(xpath: "//android.widget.TextView[@text='Minha conta']")
+  resultado = find_element(xpath: "//android.widget.TextView[@text='Meus dados']")
   expect(resultado.displayed?).to be true
 end

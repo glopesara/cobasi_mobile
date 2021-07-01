@@ -10,6 +10,7 @@ class CheckoutScreen
   end
 
   def btn_continuar
+    sleep 1
     find_element(xpath: "//android.widget.Button[@text='Continuar']").click
   end
 
@@ -24,23 +25,22 @@ class CheckoutScreen
   def edereco_form
     find_element(xpath: "//android.widget.EditText[@resource-id='CEP']").send_keys("85030120")
     find_element(xpath: "//android.widget.Button[@text='Buscar']").click
-    sleep 1
     find_element(xpath: "//android.widget.EditText[@resource-id='number']").send_keys("111")
     find_element(xpath: "//android.widget.EditText[@resource-id='receiverName']").send_keys("teste teste")
     find_element(xpath: "//android.widget.Button[@text='Casa']").click
     scrool = { start_x: 0.46, start_y: 0.73, offset_x: 0.46, offset_y: 0.37, duration: 2000 }
     Appium::TouchAction.new.swipe(scrool).perform
     find_element(xpath: "//android.widget.Button[@text='Adicionar endereço']").click
-    sleep 3
+    find_element(xpath: "//android.view.View[@text='O novo endereço foi incluído com sucesso!']")
     find_element(xpath: "//android.widget.Button[@text='Ok']").click
   end
 
   def cartao_form
     find_element(xpath: "//android.widget.EditText[@resource-id='cardNumber']").send_keys("5441994163718802")
-    find_element(xpath: "//android.widget.EditText[@resource-id='cardVerificationValue']").send_keys("123")
     find_element(xpath: "//android.widget.EditText[@resource-id='cardOwnerName']").send_keys("Teste Teste")
     find_element(xpath: "//android.widget.EditText[@resource-id='cardOwnerCPF']").send_keys("84885087350")
     find_element(xpath: "//android.widget.EditText[@resource-id='cardValidityDate']").send_keys("0322")
+    find_element(xpath: "//android.widget.EditText[@resource-id='cardVerificationValue']").send_keys("123")
     scrool = { start_x: 0.46, start_y: 0.73, offset_x: 0.46, offset_y: 0.37, duration: 2000 }
     Appium::TouchAction.new.swipe(scrool).perform
     find_element(xpath: "//android.widget.Button[@text='Continuar para revisão']").click

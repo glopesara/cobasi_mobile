@@ -7,7 +7,7 @@ class CarrinhoScreen
   end
 
   def desconto_amigo_cobasi
-    #fazer o refatoramento da validação
+    #fazer o refatoramento da validação do desconto aplicado
     find_element(xpath: "//android.widget.TextView[@text='Produtos']")
     scrool = { start_x: 0.46, start_y: 2000, end_x: 0.46, end_y: 200, duration: 2000 }
     #80 05

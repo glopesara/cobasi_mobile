@@ -24,7 +24,7 @@ Funcionalidade: Busca
             | Pássaros           | Brinquedo            |                      |
             | Peixes             | Bactericida          |                      |
             | Outros Pets        | Hamster              |                      |
-            | Casa e Jardim      | Jardim               | Irrigação            |
+            | Casa e Jardim      | Lazer                   | Churrasco            |
             | Linha Profissional | Tratamento e Higiene | Shampoo Profissional |
             | Pessoas            | Moda                 |                      |
             | Ambientes          | Área externa         |                      |
