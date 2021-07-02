@@ -7,7 +7,7 @@ Funcionalidade: Busca
             | nome | ração cachorro |
             E seleciono um produto
         Então deve ver a tela de detalhes do produto
-    @filtros
+    @filtros @smoke 
     Esquema do Cenario: Busca por filtros
         Dado que eu acesse o menu "Categorias"
             E selecione a "<categoria>"
