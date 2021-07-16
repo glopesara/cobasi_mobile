@@ -10,7 +10,8 @@ class LoginScreen
     find_element(xpath: "//android.widget.EditText[@resource-id='email']").send_keys(usuario[:email])
     find_element(xpath: "//android.widget.EditText[@resource-id='password']").send_keys(usuario[:senha])
     find_element(xpath: "//android.widget.Button[@text='Entrar']").click
-    find_element(xpath: "//android.widget.TextView[@text='Novos serviços para seu pet']")
+    # find_element(xpath: "//android.widget.TextView[@text='Novos serviços para seu pet']")
+    sleep 3
   end
 
   def tentativa_login(usuario)

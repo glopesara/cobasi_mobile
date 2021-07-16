@@ -17,7 +17,7 @@ Funcionalidade: Fluxo de compras
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
-    @cartão 
+    @compra @cartão 
     Cenario: Realizar compra com Cartão de credito usuario novo
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
