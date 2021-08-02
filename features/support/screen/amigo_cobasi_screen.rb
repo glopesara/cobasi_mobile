@@ -4,7 +4,7 @@ class AmigoCobasiScreen
     scrool = { start_x: 0.46, start_y: 0.53, offset_x: 0.46, offset_y: 0.84, duration: 2000 }
     Appium::TouchAction.new.swipe(scrool).perform
     descontos = find_elements(xpath: "//android.widget.CheckBox[@clickable='true']")
-    descontos[1].click
+    descontos[0].click
   end
 
   def swipe

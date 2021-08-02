@@ -1,7 +1,6 @@
 Dado("que acesso a tela de Login") do
   @navegador.selecionar_opcao_menus("Mais")
   @mais.selecionar_opcao("Login")
-  @login.selecionar_opcao("E-mail e senha")
 end
 
 Quando("submeto minhas credenciais:") do |table|

@@ -20,5 +20,5 @@ Funcionalidade: Login
         Exemplos:
 
             | email_imput           | senha_imput | mensagem_output                   |
-            | glopesarasp@gmail.com |             | O campo senha deve ser informado. |
-            |                       | teste12345  | E-mail inválido                   |
+            | |             | Email é obrigatório |
+            # |                       |   | E-mail inválido                   |

@@ -7,16 +7,20 @@ class LoginScreen
   end
 
   def logar(usuario)
-    find_element(xpath: "//android.widget.EditText[@resource-id='email']").send_keys(usuario[:email])
-    find_element(xpath: "//android.widget.EditText[@resource-id='password']").send_keys(usuario[:senha])
-    find_element(xpath: "//android.widget.Button[@text='Entrar']").click
+    find_element(xpath: "//android.widget.EditText").send_keys(usuario[:email])
+    find_element(xpath: "//android.widget.TextView[@text='Continuar']").click
+    find_element(xpath: "//android.widget.EditText").send_keys(usuario[:senha])
+    find_element(xpath: "//android.widget.TextView[@text='Entrar']").click
     # find_element(xpath: "//android.widget.TextView[@text='Novos serviços para seu pet']")
     sleep 3
   end
 
-  def tentativa_login(usuario)
-    find_element(xpath: "//android.widget.EditText[@resource-id='email']").send_keys(usuario[:email])
-    find_element(xpath: "//android.widget.EditText[@resource-id='password']").send_keys(usuario[:senha])
-    find_element(xpath: "//android.widget.Button[@text='Entrar']").click
-  end
+  # def tentativa_login(usuario)
+  #   find_element(xpath: "//android.widget.EditText").send_keys(usuario[:email])
+  #   find_element(xpath: "//android.widget.TextView[@text='Continuar']").click
+  #   if (usuario[:senha].length > 0)
+  #     find_element(xpath: "//android.widget.EditText").send_keys(usuario[:senha])
+  #     find_element(xpath: "//android.widget.TextView[@text='Entrar']").click
+  #   end
+  # end
 end

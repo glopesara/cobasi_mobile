@@ -1,7 +1,6 @@
 Dado("que eu realize o login com") do |table|
   @navegador.selecionar_opcao_menus("Mais")
   @mais.selecionar_opcao("Login")
-  @login.selecionar_opcao("E-mail e senha")
   usuario = table.rows_hash
   @login.logar(usuario)
 end
