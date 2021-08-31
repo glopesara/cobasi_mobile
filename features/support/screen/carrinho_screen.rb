@@ -1,9 +1,15 @@
 class CarrinhoScreen
   def finalizar_compra
     find_element(xpath: "//android.widget.TextView[@text='Produtos']")
-    scrool = { start_x: 0.46, start_y: 0.73, offset_x: 0.46, offset_y: 0.37, duration: 2000 }
-    Appium::TouchAction.new.swipe(scrool).perform
+    # scroll = { start_x: 0.46, start_y: 0.73, offset_x: 0.46, offset_y: 0.37, duration: 2000 }
+    # Appium::TouchAction.new.swipe(scroll).perform
+    scroll("//android.widget.Button[@text='Finalizar compra']")
     btn_finalizar()
+    sleep 15
+  end
+
+  def btn_finalizar
+    find_element(xpath: "//android.widget.Button[@text='Finalizar compra']").click
   end
 
   def desconto_amigo_cobasi
@@ -22,8 +28,8 @@ class CarrinhoScreen
       @condicao = false
     end
     while @condicao == false
-      scrool = { start_x: 0.46, start_y: 1233, end_x: 0.46, end_y: 200, duration: 2000 }
-      Appium::TouchAction.new.swipe(scrool).perform
+      scroll = { start_x: 0.46, start_y: 1233, end_x: 0.46, end_y: 200, duration: 2000 }
+      Appium::TouchAction.new.swipe(scroll).perform
       begin
         @condicao = find_element(xpath: elemento).displayed?
       rescue
@@ -31,10 +37,6 @@ class CarrinhoScreen
       end
     end
     voltar_timeout()
-  end
-
-  def btn_finalizar
-    find_element(xpath: "//android.widget.Button[@text='Finalizar compra']").click
   end
 
   def ignorar_timeout

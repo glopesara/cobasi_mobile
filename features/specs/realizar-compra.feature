@@ -15,8 +15,8 @@ Funcionalidade: Fluxo de compras
             E clico em ir para entrega
             E seleciono o frete Economica
             E seleciono a  forma de pagamento como Boleto Bancário
-            E clico em finalizar pedido
-        Então devo ver a tela de pedido realizado com sucusso
+        #     E clico em finalizar pedido
+        # Então devo ver a tela de pedido realizado com sucusso
     @compra @cartão 
     Cenario: Realizar compra com Cartão de credito usuario novo
         Dado que eu realize a seguinte busca
@@ -47,8 +47,8 @@ Funcionalidade: Fluxo de compras
             E clico em ir para entrega
             E seleciono o frete Economica
             E seleciono a  forma de pagamento como Boleto Bancário
-            E clico em finalizar pedido
-        Então devo ver a tela de pedido realizado com sucusso
+        #     E clico em finalizar pedido
+        # Então devo ver a tela de pedido realizado com sucusso
     @compra @agendamento @smoke 
     Cenario: Realizar compra com Bolteto usuario ja existente com agendamento
         Dado que eu realize a seguinte busca
@@ -63,5 +63,5 @@ Funcionalidade: Fluxo de compras
             # E seleciono o agendamento da entrega para o dia 3
             E seleciono o agendamento da entrega
             E seleciono a  forma de pagamento como Boleto Bancário
-            E clico em finalizar pedido
-        Então devo ver a tela de pedido realizado com sucusso
+        #     E clico em finalizar pedido
+        # Então devo ver a tela de pedido realizado com sucusso
