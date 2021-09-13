@@ -8,6 +8,7 @@ Before do
   @checkout = CheckoutScreen.new
   @amigo_cobasi = AmigoCobasiScreen.new
   @modal_amigo_cobasi = ModalAmigoCobasi.new
+  @mundo_cobasi = MundoCobasi.new
   #sobe o servidor do appium
   driver.start_driver
   #timeout de 10 segundos

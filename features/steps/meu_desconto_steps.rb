@@ -54,9 +54,28 @@ Dado("clico em adicionar ao carrinho") do
 end
 
 Dado("ative um desconto") do
+  #não consigo ativar dando scroll
+  # driver.manage.timeouts.implicit_wait = 3
+  # begin
+  #   @condicao = find_element(xpath: "//android.widget.Switch").displayed?
+  # rescue
+  #   @condicao = false
+  # end
+  # while @condicao == false
+  #   scroll = { start_x: 0.46, start_y: 1233, end_x: 0.46, end_y: 200, duration: 2000 }
+  #   Appium::TouchAction.new.swipe(scroll).perform
+  #   begin
+  #     @condicao = find_element(xpath: "//android.widget.Switch").displayed?
+  #   rescue
+  #     @condicao = false
+  #   end
+  # end
+  # driver.manage.timeouts.implicit_wait = 30
+
   desconto = find_elements(xpath: "//android.widget.Switch")
-  classe = desconto[0].attribute("bounds")
+  bounds = desconto[0].attribute("bounds")
+  validaor = bounds[-5, 4]
   desconto[0].click
-  validacao = find_element(xpath: "//android.widget.Switch[@bounds='#{classe}']")
-  expect(validacao.attribute("text")).to eql "DESATIVADO"
+  validacao = find_element(xpath: "//android.widget.TextView[contains(@bounds,'#{validaor}')]")
+  expect(validacao.attribute("text")).to eql "Ativado"
 end

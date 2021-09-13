@@ -48,7 +48,7 @@ Funcionalidade: Meu desconto
     # Cenario: Ativar oferta
     #     Dado que eu realize o login com
     #         | email | glopesarasp1@gmail.com |
-    #         | senha | Ga250400!              |
+    #         | senha | Ga250400              |
     #         E acesse o meu desconto
     #         E clico em pular
     #         E ative um desconto

@@ -4,6 +4,7 @@ class MaisScreen
     when "Login"
       find_element(xpath: "//android.widget.TextView[@text='Para acessar seus dados']").click
     when "Amigo Cobasi"
+      sleep 1
       find_element(xpath: "//android.widget.TextView[@text='Amigo Cobasi']").click
     end
   end

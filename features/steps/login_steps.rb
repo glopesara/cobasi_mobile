@@ -3,6 +3,11 @@ Dado("que acesso a tela de Login") do
   @mais.selecionar_opcao("Login")
 end
 
+Dado("que acesso a tela de amigo cobasi") do
+  @navegador.selecionar_opcao_menus("Mais")
+  @mais.selecionar_opcao("Amigo Cobasi")
+end
+
 Quando("submeto minhas credenciais:") do |table|
   usuario = table.rows_hash
   @login.logar(usuario)
@@ -25,4 +30,18 @@ end
 Então("deve estar logado") do
   resultado = find_element(xpath: "//android.widget.TextView[@text='Meus dados']")
   expect(resultado.displayed?).to be true
+end
+
+Dado("que acesso a tela de amigo cobasi pelo mundo cobasi") do
+  @mundo_cobasi.selecionar_opcao("amigo cobasi")
+end
+
+Dado("clico em favoritar produto") do
+  find_element(xpath: "//android.widget.Button[@text='Favorito']").click
+end
+
+Dado("faço login no pwa:") do |table|
+  @login.selecionar_opcao("E-mail e senha")
+  usuario = table.rows_hash
+  @login.logar_pwa(usuario)
 end

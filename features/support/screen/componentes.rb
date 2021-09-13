@@ -18,6 +18,15 @@ class Navegador
   end
 end
 
+class MundoCobasi
+  def selecionar_opcao(opcao)
+    case opcao
+    when "amigo cobasi"
+      find_element(xpath: "//android.widget.TextView[@text='Amigo Cobasi']").click
+    end
+  end
+end
+
 class ModalAmigoCobasi
   def modal_home
     find_element(xpath: "//android.widget.TextView[@text='Faça sua adesão gratuita aqui']").click
