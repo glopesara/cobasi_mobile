@@ -6,12 +6,12 @@ class Navegador
     when "Categorias"
       find_element(xpath: "//android.widget.Button[@content-desc='Categorias, tab, 2 of 5']").click
     when "Meu desconto"
-      find_element(xpath: "//android.widget.Button[@content-desc='Descontos, tab, 3 of 5']/android.widget.TextView[1]").click
+      find_element(xpath: "//android.widget.Button[@content-desc='Meu Desconto, tab, 3 of 5']/android.widget.TextView[2]").click
     end
   end
 
   def realizar_busca(produto)
-    find_element(xpath: "//android.widget.TextView[@bounds='[819,126][896,205]']").click
+    find_element(xpath: "//android.widget.TextView[@bounds='[819,126][896,204]']").click
     find_element(xpath: "//android.widget.EditText[@text='Buscar']").send_keys(produto[:nome])
     autocomplete = find_elements(xpath: "//android.widget.TextView[contains(@text, '#{produto[:nome]}')]").sample
     autocomplete.click

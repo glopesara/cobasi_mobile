@@ -4,15 +4,14 @@ end
 Dado("clico em pular") do
   driver.manage.timeouts.implicit_wait = 2
   begin
-    @condicao = find_element(xpath: "//android.widget.TextView[@text='Pular']").displayed?
+    @condicao = find_element(xpath: "//android.widget.TextView[@text='Próximo']").displayed?
   rescue
     @condicao = false
   end
-  if @condicao == true
-    find_element(xpath: "//android.widget.TextView[@text='Pular']").click
-  else
+  while @condicao == true
+    find_element(xpath: "//android.widget.TextView[@text='Próximo']").click
     begin
-      @condicao = find_element(xpath: "//android.widget.TextView[@text='Pular']").displayed?
+      @condicao = find_element(xpath: "//android.widget.TextView[@text='Próximo']").displayed?
     rescue
       @condicao = false
     end

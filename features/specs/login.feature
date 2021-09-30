@@ -9,20 +9,21 @@ Funcionalidade: Login
             | senha | Ga250400              |
             E acesse o meu "Mais"
         Então deve estar logado
-        @logincobasi
+    @logincobasi @smoke
     Cenario: Login pelo amigo cobasi
         Dado que acesso a tela de amigo cobasi
             E faço login no pwa:
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
         Então tenho que ver o quadro de pontos
+    @smoke
     Cenario: Login pelo amigo cobasi (mundo cobasi)
         Dado que acesso a tela de amigo cobasi pelo mundo cobasi
             E faço login no pwa:
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
         Então tenho que ver o quadro de pontos
-
+    @smoke
     Cenario: Realizar login pelo favoritos
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
@@ -33,3 +34,12 @@ Funcionalidade: Login
             | senha | Ga250400              |
             E acesse o meu "Mais"
         Então deve estar logado
+    @logindesconto @smoke
+    Cenario: Login pelo menu meu desconto
+        Dado que eu acesse o meu desconto
+            E clico em pular
+            E clico em login
+            E realize o login com
+            | email | gabriel.lopes.ara@gmail.com |
+            | senha | Ga250400                    |
+        Então devo ver as ofertas

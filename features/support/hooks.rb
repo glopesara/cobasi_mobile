@@ -4,8 +4,10 @@ Before do
   @login = LoginScreen.new
   @catalogo = CatalogoScreen.new
   @tela_produto = ProdutoScreen.new
-  @tela_carrinho = CarrinhoScreen.new
+  @carrinho = CarrinhoScreen.new
+  @carrinho_pwa = CarrinhoPwaScreen.new
   @checkout = CheckoutScreen.new
+  @checkout_pwa = CheckoutPwaScreen.new
   @amigo_cobasi = AmigoCobasiScreen.new
   @modal_amigo_cobasi = ModalAmigoCobasi.new
   @mundo_cobasi = MundoCobasi.new
