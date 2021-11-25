@@ -10,7 +10,7 @@ class CheckoutPwaScreen
   end
 
   def btn_continuar
-    sleep 1
+    sleep 3
     find_element(xpath: "//android.widget.Button[@text='Continuar']").click
   end
 
@@ -31,7 +31,7 @@ class CheckoutPwaScreen
     Appium::TouchAction.new.swipe(scroll).perform
     find_element(xpath: "//android.widget.Button[@text='Casa']").click
     find_element(xpath: "//android.widget.Button[@text='Adicionar endereço']").click
-    find_element(xpath: "//android.view.View[@text='O novo endereço foi incluído com sucesso!']")
+    find_element(xpath: "//android.widget.TextView[@text='O novo endereço foi incluído com sucesso!']")
     find_element(xpath: "//android.widget.Button[@text='Ok']").click
   end
 
@@ -47,7 +47,7 @@ class CheckoutPwaScreen
   end
 
   def entrega_btn
-    find_element(xpath: "//android.view.View[contains(@text,'Mantenha seus')]")
+    find_element(xpath: "//android.widget.TextView[contains(@text,'Mantenha seus')]")
     scroll("//android.widget.Button[@text='Continuar para entrega']")
     clcik_btn_entrega()
   end
@@ -57,7 +57,9 @@ class CheckoutPwaScreen
   end
 
   def selecionar_entrega(frete)
-    find_element(xpath: "//android.view.View[contains(@text,'#{frete}')]").click
+    find_element(xpath: "//android.widget.TextView[contains(@text, 'Subtotal:')]")
+    scroll("//android.widget.TextView[contains(@text,'#{frete}')]")
+    find_element(xpath: "//android.widget.TextView[contains(@text,'#{frete}')]").click
     scroll("//android.widget.Button[@text='Ir para pagamento']")
     pagamento_btn()
   end
@@ -90,13 +92,13 @@ class CheckoutPwaScreen
   end
 
   def pagamento_boleto
-    find_element(xpath: "//android.view.View[@text='Boleto Bancário']").click
+    find_element(xpath: "//android.widget.TextView[@text='Boleto Bancário']").click
     scroll("//android.widget.Button[@text='Continuar para revisão']")
     find_element(xpath: "//android.widget.Button[@text='Continuar para revisão']").click
   end
 
   def finalizar_pedido
-    find_element(xpath: "//android.view.View[@text='Resumo do pedido']")
+    find_element(xpath: "//android.widget.TextView[@text='Resumo do pedido']")
     scroll = { start_x: 0.46, start_y: 0.89, offset_x: 0.46, offset_y: 0.13, duration: 2000 }
     Appium::TouchAction.new.swipe(scroll).perform
     find_element(xpath: "//android.widget.Button[@text='Finalizar pedido']").click

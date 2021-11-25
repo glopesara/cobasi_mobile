@@ -5,22 +5,22 @@ Funcionalidade: Login
     Cenario: Login com sucesso
         Dado que acesso a tela de Login
             E submeto minhas credenciais:
-            | email | glopesarasp@gmail.com |
+            | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400              |
-            E acesse o meu "Mais"
+            # E acesse o meu "Mais"
         Então deve estar logado
     @logincobasi @smoke
     Cenario: Login pelo amigo cobasi
         Dado que acesso a tela de amigo cobasi
             E faço login no pwa:
-            | email | glopesarasp@gmail.com |
+            | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400              |
         Então tenho que ver o quadro de pontos
     @smoke
     Cenario: Login pelo amigo cobasi (mundo cobasi)
         Dado que acesso a tela de amigo cobasi pelo mundo cobasi
             E faço login no pwa:
-            | email | glopesarasp@gmail.com |
+            | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400              |
         Então tenho que ver o quadro de pontos
     @smoke
@@ -30,7 +30,7 @@ Funcionalidade: Login
             E seleciono um produto
             E clico em favoritar produto
             E faço login no pwa:
-            | email | glopesarasp@gmail.com |
+            | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400              |
             E acesse o meu "Mais"
         Então deve estar logado
@@ -43,3 +43,11 @@ Funcionalidade: Login
             | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400                    |
         Então devo ver as ofertas
+    @loginassinatura @smoke
+    Cenario: Login pela assinatura (Mundo Cobasi)
+        Dado que eu acesse a tela de assinatura pelo mundo cobasi
+             E faço login no pwa:
+            | email | gabriel.lopes.ara@gmail.com |
+            | senha | Ga250400              |
+        E acesse o meu "Mais"
+        Então deve estar logado

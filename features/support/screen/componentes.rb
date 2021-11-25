@@ -6,7 +6,7 @@ class Navegador
     when "Categorias"
       find_element(xpath: "//android.widget.Button[@content-desc='Categorias, tab, 2 of 5']").click
     when "Meu desconto"
-      find_element(xpath: "//android.widget.Button[@content-desc='Meu Desconto, tab, 3 of 5']/android.widget.TextView[2]").click
+      find_element(xpath: "//android.widget.Button[@content-desc='Descontos, tab, 3 of 5']/android.widget.TextView[1]").click
     end
   end
 
@@ -23,6 +23,8 @@ class MundoCobasi
     case opcao
     when "amigo cobasi"
       find_element(xpath: "//android.widget.TextView[@text='Amigo Cobasi']").click
+    when "assinatura"
+      find_element(xpath: "//android.widget.TextView[@text='Assinatura']").click
     end
   end
 end

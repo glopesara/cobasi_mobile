@@ -45,3 +45,7 @@ Dado("faço login no pwa:") do |table|
   usuario = table.rows_hash
   @login.logar_pwa(usuario)
 end
+
+Dado("que eu acesse a tela de assinatura pelo mundo cobasi") do
+  @mundo_cobasi.selecionar_opcao("assinatura")
+end

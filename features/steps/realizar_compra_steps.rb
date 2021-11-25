@@ -2,6 +2,11 @@ Dado("clico no botão comprar") do
   @tela_produto.botao_comprar()
 end
 
+Dado("clico no carrinho") do
+  sleep 2
+  find_element(xpath: "//android.widget.TextView[@bounds ='[966,132][1032,199]']").click
+end
+
 Dado("clico em ver carrinho no alerta") do
   @tela_produto.alerta_carrinho()
 end
@@ -42,7 +47,7 @@ Dado("clico em finalizar pedido") do
 end
 
 Então("devo ver a tela de pedido realizado com sucusso") do
-  resultado = find_element(xpath: "//android.view.View[contains(@text, 'Pedido n')]")
+  resultado = find_element(xpath: "//android.widget.TextView[contains(@text, 'Pedido n')]")
   expect(resultado.displayed?).to be true
 end
 

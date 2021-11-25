@@ -2,12 +2,30 @@
 
 Funcionalidade: Fluxo de compras
     @compra @smoke @pwa
-    Cenario: Realizar compra com Bolteto usuario novo
+    Cenario: Realizar compra com Bolteto usuario novo 1
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
-            E clico em ver carrinho no alerta
+            E clico no carrinho
+            # E clico em ver carrinho no alerta
+            E clico em finalizar comprar
+            E adiciono o um novo e-mail
+            E submeto o formulario da dados pessoais
+            E submeto o formulario de endereço
+            E clico em ir para entrega
+            E seleciono o frete Economica
+            E seleciono a  forma de pagamento como Boleto Bancário
+            E clico em finalizar pedido
+        Então devo ver a tela de pedido realizado com sucusso
+        @compra @smoke @pwa
+    Cenario: Realizar compra com Bolteto usuario novo 2
+        Dado que eu realize a seguinte busca
+            | nome | ração gato |
+            E seleciono um produto
+            E clico no botão comprar
+            E clico no carrinho
+            # E clico em ver carrinho no alerta
             E clico em finalizar comprar
             E adiciono o um novo e-mail
             E submeto o formulario da dados pessoais
@@ -23,7 +41,8 @@ Funcionalidade: Fluxo de compras
             | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
-            E clico em ver carrinho no alerta
+            E clico no carrinho
+            # E clico em ver carrinho no alerta
             E clico em finalizar comprar
             E adiciono o um novo e-mail
             E submeto o formulario da dados pessoais
@@ -35,12 +54,29 @@ Funcionalidade: Fluxo de compras
         E clico em finalizar pedido
     # Então devo ver a tela de pedido realizado com sucusso
     @compra @smoke
-    Cenario: Realizar compra com Bolteto usuario ja existente
+    Cenario: Realizar compra com Bolteto usuario ja existente 1
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
-            E clico em ver carrinho no alerta
+            E clico no carrinho
+            # E clico em ver carrinho no alerta
+            E clico em finalizar comprar
+            E adiciono o e-mail "testes@testes.com"
+            E clico em cotinuar
+            E clico em ir para entrega
+            E seleciono o frete Economica
+            E seleciono a  forma de pagamento como Boleto Bancário
+            E clico em finalizar pedido
+        Então devo ver a tela de pedido realizado com sucusso
+         @smoke
+    Cenario: Realizar compra com Bolteto usuario ja existente 2
+        Dado que eu realize a seguinte busca
+            | nome | ração gato |
+            E seleciono um produto
+            E clico no botão comprar
+            E clico no carrinho
+            # E clico em ver carrinho no alerta
             E clico em finalizar comprar
             E adiciono o e-mail "testes@testes.com"
             E clico em cotinuar
@@ -55,7 +91,8 @@ Funcionalidade: Fluxo de compras
             | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
-            E clico em ver carrinho no alerta
+            E clico no carrinho
+            # E clico em ver carrinho no alerta
             E clico em finalizar comprar
             E adiciono o e-mail "teste@agendamento.com"
             E clico em cotinuar
