@@ -11,7 +11,7 @@ class Navegador
   end
 
   def realizar_busca(produto)
-    find_element(xpath: "//android.widget.TextView[@bounds='[819,126][896,204]']").click
+    find_element(xpath: "//android.widget.TextView[@bounds='[807,125][884,203]']").click
     find_element(xpath: "//android.widget.EditText[@text='Buscar']").send_keys(produto[:nome])
     autocomplete = find_elements(xpath: "//android.widget.TextView[contains(@text, '#{produto[:nome]}')]").sample
     autocomplete.click

@@ -7,7 +7,6 @@ Before do
   @carrinho = CarrinhoScreen.new
   @carrinho_pwa = CarrinhoPwaScreen.new
   @checkout = CheckoutScreen.new
-  @checkout_pwa = CheckoutPwaScreen.new
   @amigo_cobasi = AmigoCobasiScreen.new
   @modal_amigo_cobasi = ModalAmigoCobasi.new
   @mundo_cobasi = MundoCobasi.new
