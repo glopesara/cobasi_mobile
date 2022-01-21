@@ -2,16 +2,16 @@ class Navegador
   def selecionar_opcao_menus(opcao)
     case opcao
     when "Mais"
-      find_element(xpath: "//android.widget.Button[@content-desc='Mais, tab, 5 of 5']").click
+      find_element(xpath: "//android.widget.Button[@content-desc = 'Mais, tab, 5 of 6']").click
     when "Categorias"
-      find_element(xpath: "//android.widget.Button[@content-desc='Categorias, tab, 2 of 5']").click
+      find_element(xpath: "//android.widget.Button[@content-desc='Categorias, tab, 2 of 6']").click
     when "Meu desconto"
-      find_element(xpath: "//android.widget.Button[@content-desc='Descontos, tab, 3 of 5']/android.widget.TextView[1]").click
+      find_element(xpath: "//android.widget.Button[@content-desc='Descontos, tab, 3 of 6']/android.widget.TextView[1]").click
     end
   end
 
   def realizar_busca(produto)
-    find_element(xpath: "//android.widget.TextView[@bounds='[807,125][884,203]']").click
+    find_element(xpath: "//android.widget.TextView[@text = 'Buscar produtos, marcas e muito mais…']").click
     find_element(xpath: "//android.widget.EditText[@text='Buscar']").send_keys(produto[:nome])
     autocomplete = find_elements(xpath: "//android.widget.TextView[contains(@text, '#{produto[:nome]}')]").sample
     autocomplete.click

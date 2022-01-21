@@ -13,7 +13,7 @@ Before do
   #sobe o servidor do appium
   driver.start_driver
   #timeout de 10 segundos
-  driver.manage.timeouts.implicit_wait = 30
+  driver.manage.timeouts.implicit_wait = 40
 end
 
 After do |scenario|

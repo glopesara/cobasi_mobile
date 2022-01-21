@@ -1,12 +1,12 @@
 #language: pt
 
 Funcionalidade: Login
-    @smoke @login
+    @smoke @login @ok
     Cenario: Login com sucesso
         Dado que acesso a tela de Login
             E submeto minhas credenciais:
-            | email | glopesarasp@gmail.com |
-            | senha | Ga250400!             |
+            | email | glopesarasp1@gmail.com |
+            | senha | Ga250400             |
         # E acesse o meu "Mais"
         Então deve estar logado
     @logincobasi @smoke
@@ -14,14 +14,14 @@ Funcionalidade: Login
         Dado que acesso a tela de amigo cobasi
             E faço login no pwa:
             | email | glopesarasp@gmail.com |
-            | senha | Ga250400!             |
+            | senha | Ga250400             |
         Então tenho que ver o quadro de pontos
     @smoke
     Cenario: Login pelo amigo cobasi (mundo cobasi)
         Dado que acesso a tela de amigo cobasi pelo mundo cobasi
             E faço login no pwa:
-            | email | glopesarasp@gmail.com |
-            | senha | Ga250400!             |
+            | email | gabriel.lopes.ara@gmail.com |
+            | senha | Ga250400             |
         Então tenho que ver o quadro de pontos
     @smoke
     Cenario: Realizar login pelo favoritos
@@ -31,7 +31,7 @@ Funcionalidade: Login
             E clico em favoritar produto
             E faço login no pwa:
             | email | glopesarasp@gmail.com |
-            | senha | Ga250400!             |
+            | senha | Ga250400             |
             E acesse o meu "Mais"
         Então deve estar logado
     @logindesconto @smoke
@@ -40,14 +40,14 @@ Funcionalidade: Login
             E clico em pular
             E clico em login
             E realize o login com
-            | email | glopesarasp@gmail.com |
-            | senha | Ga250400!             |
+            | email | gabriel.lopes.ara@gmail.com |
+            | senha | Ga250400             |
         Então devo ver as ofertas
     @loginassinatura
     Cenario: Login pela assinatura (Mundo Cobasi)
         Dado que eu acesse a tela de assinatura pelo mundo cobasi
             E faço login no pwa:
             | email | glopesarasp@gmail.com |
-            | senha | Ga250400!             |
+            | senha | Ga250400             |
             E acesse o meu "Mais"
         Então deve estar logado
