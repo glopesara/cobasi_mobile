@@ -23,14 +23,6 @@ Dado("clico em cotinuar") do
   @checkout.btn_continuar()
 end
 
-# Dado("submeto o formulario da dados pessoais") do
-#   @checkout.dados_pessoais_form()
-# end
-
-# Dado("submeto o formulario de endereço") do
-#   @checkout.edereco_form()
-# end
-
 Dado("clico em continuar para entrega") do
   @checkout.entrega_btn()
 end
@@ -67,10 +59,10 @@ Dado("seleciono o agendamento da entrega") do
   @checkout.selecionar_entrega("Entrega agendada")
 end
 
-Dado("adiciono um CEP") do
+Dado("adiciono o CEP {string}") do |string|
   find_element(xpath: "//android.widget.TextView[@text='Produtos']")
   cep = find_elements(xpath: "//android.widget.EditText")
-  cep[1].send_keys("85030120")
+  cep[1].send_keys(string)
   find_element(xpath: "//android.widget.TextView[@text='Buscar']").click
   sleep 2
 end
