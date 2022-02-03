@@ -1,6 +1,6 @@
 class CarrinhoScreen
   def finalizar_compra
-    find_element(xpath: "//android.widget.TextView[@text='Produtos']")
+    find_element(xpath: "//android.widget.TextView[@text='Frete e prazo']")
     # scroll = { start_x: 0.46, start_y: 0.73, offset_x: 0.46, offset_y: 0.37, duration: 2000 }
     # Appium::TouchAction.new.swipe(scroll).perform
     scroll("//android.widget.TextView[@text='Finalizar a compra']")
@@ -19,6 +19,19 @@ class CarrinhoScreen
     #chamar o btn_finalizar quando for para a screnn e exluir o passo de vou para tela de produto
   end
 
+  def selecionar_frete(frete)
+    sleep 7
+    find_element(xpath: "//android.widget.TextView[@text='Produtos']")
+    # scroll("//android.widget.EditText")
+    scroll = { start_x: 0.46, start_y: 600, end_x: 0.46, end_y: 200, duration: 2000 }
+    Appium::TouchAction.new.swipe(scroll).perform
+    cep = find_elements(xpath: "//android.widget.EditText")
+    cep[1].send_keys(frete)
+    sleep 3
+    find_element(xpath: "//android.widget.TextView[@text='Buscar']").click
+    sleep 3
+  end
+
   def scroll(elemento)
     ignorar_timeout()
     begin
@@ -27,7 +40,7 @@ class CarrinhoScreen
       @condicao = false
     end
     while @condicao == false
-      scroll = { start_x: 0.46, start_y: 1233, end_x: 0.46, end_y: 200, duration: 2000 }
+      scroll = { start_x: 0.46, start_y: 800, end_x: 0.46, end_y: 200, duration: 2000 }
       Appium::TouchAction.new.swipe(scroll).perform
       begin
         @condicao = find_element(xpath: elemento).displayed?

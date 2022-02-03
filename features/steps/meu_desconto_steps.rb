@@ -2,6 +2,7 @@ Dado("acesse o meu desconto") do
   @navegador.selecionar_opcao_menus("Meu desconto")
 end
 Dado("clico em pular") do
+  find_element(xpath: "//android.widget.TextView[contains(@text, 'Disponível apenas')]")
   driver.manage.timeouts.implicit_wait = 2
   begin
     @condicao = find_element(xpath: "//android.widget.TextView[@text='Próximo']").displayed?

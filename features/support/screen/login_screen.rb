@@ -8,14 +8,28 @@ class LoginScreen
 
   def logar(usuario)
     find_element(xpath: "//android.widget.TextView[@text='Acesse sua conta']")
+    sleep 2
     find_element(xpath: "//android.widget.EditText").send_keys(usuario[:email])
-    puts usuario[:email]
+    sleep 2
     find_element(xpath: "//android.widget.TextView[@text='Continuar']").click
     sleep 2
     find_element(xpath: "//android.widget.EditText").send_keys(usuario[:senha])
-    puts usuario[:senha]
+    sleep 2
     find_element(xpath: "//android.widget.TextView[@text='Entrar']").click
-    sleep 3
+    sleep 2
+  end
+
+  def login_checkout(usuario)
+    find_element(xpath: "//android.widget.TextView[@text='Acesse sua conta']")
+    imput_email = find_elements(xpath: "//android.widget.EditText")
+    imput_email[2].send_keys(usuario[:email])
+    sleep 2
+    find_element(xpath: "//android.widget.TextView[@text='Continuar']").click
+    sleep 2
+    imput_senha = find_elements(xpath: "//android.widget.EditText")
+    imput_senha[2].send_keys(usuario[:senha])
+    sleep 2
+    find_element(xpath: "//android.widget.TextView[@text='Entrar']").click
   end
 
   def logar_pwa(usuario)

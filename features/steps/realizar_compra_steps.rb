@@ -23,14 +23,6 @@ Dado("clico em cotinuar") do
   @checkout.btn_continuar()
 end
 
-# Dado("submeto o formulario da dados pessoais") do
-#   @checkout.dados_pessoais_form()
-# end
-
-# Dado("submeto o formulario de endereço") do
-#   @checkout.edereco_form()
-# end
-
 Dado("clico em continuar para entrega") do
   @checkout.entrega_btn()
 end
@@ -64,18 +56,19 @@ Dado("submeta o formulario de cartão de credito") do
 end
 
 Dado("seleciono o agendamento da entrega") do
-  @checkout.selecionar_entrega("Entrega agendada")
+  @checkout.selecionar_entrega("agendada")
 end
 
-Dado("adiciono um CEP") do
-  find_element(xpath: "//android.widget.TextView[@text='Produtos']")
-  cep = find_elements(xpath: "//android.widget.EditText")
-  cep[1].send_keys("85030120")
-  find_element(xpath: "//android.widget.TextView[@text='Buscar']").click
-  sleep 2
+Dado("adiciono o CEP {string}") do |string|
+  @carrinho.selecionar_frete(string)
 end
 
 Dado("realize login com") do |table|
   usuario = table.rows_hash
   @login.logar(usuario)
+end
+
+Dado("e faço login no checkout:") do |table|
+  usuario = table.rows_hash
+  @login.login_checkout(usuario)
 end

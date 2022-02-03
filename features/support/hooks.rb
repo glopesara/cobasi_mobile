@@ -5,7 +5,6 @@ Before do
   @catalogo = CatalogoScreen.new
   @tela_produto = ProdutoScreen.new
   @carrinho = CarrinhoScreen.new
-  @carrinho_pwa = CarrinhoPwaScreen.new
   @checkout = CheckoutScreen.new
   @amigo_cobasi = AmigoCobasiScreen.new
   @modal_amigo_cobasi = ModalAmigoCobasi.new

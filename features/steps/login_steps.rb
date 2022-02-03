@@ -37,7 +37,7 @@ Dado("que acesso a tela de amigo cobasi pelo mundo cobasi") do
 end
 
 Dado("clico em favoritar produto") do
-  find_element(xpath: "//android.widget.Button[@text='Favorito']").click
+  find_element(xpath: "//android.widget.TextView[@bounds='[972,1376][1032,1437]']").click
 end
 
 Dado("faço login no pwa:") do |table|

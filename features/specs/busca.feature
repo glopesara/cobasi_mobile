@@ -1,13 +1,13 @@
 #language: pt
 
 Funcionalidade: Busca
-    @busca @smoke @ok
+    @busca @smoke 
     Cenario: Busca pelo nome do produto
         Dado que eu realize a seguinte busca
             | nome | bolinha |
             E seleciono um produto
         Então deve ver a tela de detalhes do produto
-    @filtros @smoke @ok
+    @filtros @smoke  
     Esquema do Cenario: Busca por filtros
         Dado que eu acesse o menu "Categorias"
             E selecione a "<categoria>"

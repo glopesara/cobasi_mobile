@@ -1,6 +1,7 @@
 class CatalogoScreen
   def selecionar_produto
-    catalogo = find_elements(xpath: "//android.view.ViewGroup[@bounds='[0,264][720,1182]']").sample
-    catalogo.click
+    find_element(xpath: "//android.widget.TextView[@text='Ordenar por']")
+    catalogo = find_elements(xpath: "//android.widget.ScrollView")
+    catalogo[1].click
   end
 end

@@ -3,6 +3,7 @@ require "appium_lib"
 require "fileutils"
 require "cpf_cnpj"
 require "faker"
+require_relative "./modules.rb"
 
 # Limpa os logs e os screenshots
 FileUtils.rm_f(Dir.glob("logs/*.json"))
