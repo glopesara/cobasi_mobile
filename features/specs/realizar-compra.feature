@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Fluxo de compras
-    @compra @smoke @pwa
+    @compra @smoke @nativa
     Cenario: Realizar compra com Bolteto 1
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
@@ -18,7 +18,7 @@ Funcionalidade: Fluxo de compras
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
-    @compra @smoke @pwa
+    @compra @smoke 
     Cenario: Realizar compra com Bolteto 2
         Dado que eu realize a seguinte busca
             | nome | ração gato |
@@ -37,7 +37,7 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
 
-    @compra @agendamento @smoke @nativa
+    @compra @agendamento @smoke 
     Cenario: Realizar compra com Bolteto usuario ja existente com agendamento
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
