@@ -32,8 +32,17 @@ Dado("seleciono o frete Economica") do
 end
 
 Dado("seleciono a  forma de pagamento como Boleto Bancário") do
-  @checkout.pagamento_boleto()
+  @checkout.forma_pagamento("Boleto Bancário")
 end
+
+Dado("seleciono a  forma de pagamento como pix") do
+  @checkout.forma_pagamento("Pix")
+end
+
+Dado("seleciono a  forma de pagamento como Pagamento instantâneo") do
+  @checkout.forma_pagamento("Pagamento instantâneo")
+end
+
 Dado("clico em finalizar pedido") do
   @checkout.finalizar_pedido()
 end
@@ -70,4 +79,14 @@ end
 Dado("realize login com") do |table|
   usuario = table.rows_hash
   @login.logar(usuario)
+end
+
+Então("devo ver a tela com a chave pix para pagamento") do
+  resultado = find_element(xpath: "//android.widget.TextView[@text='Copie o código do pagamento']")
+  expect(resultado.displayed?).to be true
+end
+
+Então("devo ver a tela de formas de Pagamento instantâneo") do
+  resultado = find_element(xpath: "//android.widget.TextView[@text='Pagamento disponível até']")
+  expect(resultado.displayed?).to be true
 end

@@ -62,8 +62,8 @@ class CheckoutScreen
     end
   end
 
-  def pagamento_boleto
-    find_element(xpath: "//android.widget.TextView[@text='Boleto Bancário']").click
+  def forma_pagamento(opcao)
+    find_element(xpath: "//android.widget.TextView[@text='#{opcao}']").click
     scroll("//android.widget.TextView[@text='Continuar para revisão']")
     find_element(xpath: "//android.widget.TextView[@text='Continuar para revisão']").click
   end

@@ -49,3 +49,11 @@ end
 Dado("que eu acesse a tela de assinatura pelo mundo cobasi") do
   @mundo_cobasi.selecionar_opcao("assinatura")
 end
+
+Dado("que eu acesse o menu de favoritos") do
+  @navegador.selecionar_opcao_menus("Favoritos")
+end
+
+Dado("clico em entrar na conta") do
+  find_element(xpath: "//android.widget.TextView[@text='Entrar na conta']").click
+end

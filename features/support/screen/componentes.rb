@@ -7,6 +7,8 @@ class Navegador
       find_element(xpath: "//android.widget.Button[@content-desc='Categorias, tab, 2 of 6']").click
     when "Meu desconto"
       find_element(xpath: "//android.widget.Button[@content-desc='Descontos, tab, 3 of 6']").click
+    when "Favoritos"
+      find_element(xpath: "//android.widget.Button[@content-desc='Favoritos, tab, 4 of 6']").click
     end
   end
 
