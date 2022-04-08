@@ -21,7 +21,7 @@ Funcionalidade: Fluxo de compras
     @compra @smoke 
     Cenario: Realizar compra com Bolteto 2
         Dado que eu realize a seguinte busca
-            | nome | ração gato |
+            | nome | ração cachorro|
             E seleciono um produto
             E clico no botão comprar
             E clico em ver carrinho no alerta
@@ -40,7 +40,7 @@ Funcionalidade: Fluxo de compras
         @compra @smoke @pix
     Cenario: Realizar compra com pix
         Dado que eu realize a seguinte busca
-            | nome | ração gato |
+            | nome | ração cachorro|
             E seleciono um produto
             E clico no botão comprar
             E clico em ver carrinho no alerta
@@ -59,7 +59,7 @@ Funcionalidade: Fluxo de compras
             @compra @smoke @pagamentointantaneo
     Cenario: Realizar compra com Pagamento instantâneo 
         Dado que eu realize a seguinte busca
-            | nome | ração gato |
+            | nome | ração cachorro|
             E seleciono um produto
             E clico no botão comprar
             E clico em ver carrinho no alerta

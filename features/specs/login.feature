@@ -55,7 +55,7 @@ Funcionalidade: Login
     Cenario: Login pelo menu de favoritos
         Dado que eu acesse o menu de favoritos
             E clico em entrar na conta
-            E faço login no pwa:
+            E submeto minhas credenciais:
             | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400                    |
             E acesse o meu "Mais"
