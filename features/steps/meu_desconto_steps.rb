@@ -9,9 +9,9 @@ Dado("clico em pular") do
     @condicao = false
   end
   while @condicao == true
-    find_element(xpath: "//android.widget.TextView[@text='Próximo']").click
     begin
       @condicao = find_element(xpath: "//android.widget.TextView[@text='Próximo']").displayed?
+      find_element(xpath: "//android.widget.TextView[@text='Próximo']").click
     rescue
       @condicao = false
     end
