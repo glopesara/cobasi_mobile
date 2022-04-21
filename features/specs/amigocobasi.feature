@@ -10,7 +10,7 @@ Funcionalidade: Amigo cobasi
 
     Cenario: Acesso a tela amigo cobasi (mundo cobasi)
         Dado que acesso a tela de amigo cobasi pelo mundo cobasi
-            E faço login no pwa:
+            E submeto minhas credenciais:
             | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400                    |
         Então tenho que ver o quadro de pontos

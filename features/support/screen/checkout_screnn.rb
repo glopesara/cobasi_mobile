@@ -28,7 +28,7 @@ class CheckoutScreen
   end
 
   def selecionar_entrega(frete)
-    find_element(xpath: "//android.widget.TextView[contains(@text, 'Subtotal:')]")
+    find_element(xpath: "//android.widget.TextView[contains(@text, 'Selecione uma opção:')]")
     scroll("//android.widget.TextView[contains(@text,'#{frete}')]")
     find_element(xpath: "//android.widget.TextView[contains(@text,'#{frete}')]").click
     scroll("//android.widget.TextView[@text='Ir para pagamento']")

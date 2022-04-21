@@ -18,12 +18,11 @@ Funcionalidade: Login
     @smoke
     Cenario: Login pelo amigo cobasi (mundo cobasi)
         Dado que acesso a tela de amigo cobasi pelo mundo cobasi
-            E faço login no pwa:
+            E submeto minhas credenciais:
             | email | gabriel.lopes.ara@gmail.com |
             | senha | Ga250400                    |
         Então tenho que ver o quadro de pontos
-    @smoke
-    @favoritos
+    @smoke @favoritos
     Cenario: Realizar login pelo favoritos
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
@@ -46,17 +45,8 @@ Funcionalidade: Login
     @loginassinatura
     Cenario: Login pela assinatura (Mundo Cobasi)
         Dado que eu acesse a tela de assinatura pelo mundo cobasi
-            E faço login no pwa:
-            | email | gabriel.lopes.ara@gmail.com |
-            | senha | Ga250400                    |
-            E acesse o meu "Mais"
-        Então deve estar logado
-    @loginfavoritos
-    Cenario: Login pelo menu de favoritos
-        Dado que eu acesse o menu de favoritos
-            E clico em entrar na conta
             E submeto minhas credenciais:
-            | email | gabriel.lopes.ara@gmail.com |
-            | senha | Ga250400                    |
+            | email | glopesarasp@gmail.com |
+            | senha | Ga250400              |
             E acesse o meu "Mais"
         Então deve estar logado
