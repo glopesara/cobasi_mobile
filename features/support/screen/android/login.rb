@@ -16,13 +16,6 @@ class LoginScreen
     sleep 3
   end
 
-  def logar_pwa(usuario)
-    find_element(xpath: "//android.widget.EditText[@resource-id='email']").send_keys(usuario[:email])
-    find_element(xpath: "//android.widget.EditText[@resource-id='password']").send_keys(usuario[:senha])
-    find_element(xpath: "//android.widget.Button[@text='Entrar']").click
-    sleep 3
-  end
-
   # def tentativa_login(usuario)
   #   find_element(xpath: "//android.widget.EditText").send_keys(usuario[:email])
   #   find_element(xpath: "//android.widget.TextView[@text='Continuar']").click

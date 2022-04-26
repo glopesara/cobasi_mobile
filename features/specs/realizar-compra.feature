@@ -18,10 +18,10 @@ Funcionalidade: Fluxo de compras
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
-    @compra @smoke 
+    @compra @smoke
     Cenario: Realizar compra com Bolteto 2
         Dado que eu realize a seguinte busca
-            | nome | ração cachorro|
+            | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
             E clico em ver carrinho no alerta
@@ -36,11 +36,11 @@ Funcionalidade: Fluxo de compras
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
-        
-        @compra @smoke @pix
+
+    @compra @smoke @pix @nativa
     Cenario: Realizar compra com pix
         Dado que eu realize a seguinte busca
-            | nome | ração cachorro|
+            | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
             E clico em ver carrinho no alerta
@@ -56,10 +56,10 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar pedido
         Então devo ver a tela com a chave pix para pagamento
 
-            @compra @smoke @pagamentointantaneo
-    Cenario: Realizar compra com Pagamento instantâneo 
+    @compra @smoke @pagamentointantaneo @nativa
+    Cenario: Realizar compra com Pagamento instantâneo
         Dado que eu realize a seguinte busca
-            | nome | ração cachorro|
+            | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
             E clico em ver carrinho no alerta
@@ -75,7 +75,7 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar pedido
         Então devo ver a tela de formas de Pagamento instantâneo
 
-    @compra @agendamento @smoke 
+    @compra @agendamento @smoke
     Cenario: Realizar compra com Bolteto entrega por agendamento
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
@@ -91,7 +91,7 @@ Funcionalidade: Fluxo de compras
             E seleciono o agendamento da entrega
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
-            Então devo ver a tela de pedido realizado com sucusso
+        Então devo ver a tela de pedido realizado com sucusso
 
 #        @cartão
 # Cenario: Realizar compra com Cartão de credito usuario novo

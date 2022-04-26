@@ -1,4 +1,14 @@
-class Navegador
+# encoding: UTF-8
+class Home
+  def mundo_cobasi(opcao)
+    case opcao
+    when "amigo cobasi"
+      find_element(xpath: "//android.widget.TextView[@text='Amigo Cobasi']").click
+    when "assinatura"
+      find_element(xpath: "//android.widget.TextView[@text='Assinatura']").click
+    end
+  end
+
   def selecionar_opcao_menus(opcao)
     case opcao
     when "Mais"
@@ -18,30 +28,8 @@ class Navegador
     autocomplete = find_elements(xpath: "//android.widget.TextView[contains(@text, '#{produto[:nome]}')]").sample
     autocomplete.click
   end
-end
 
-class MundoCobasi
-  def selecionar_opcao(opcao)
-    case opcao
-    when "amigo cobasi"
-      find_element(xpath: "//android.widget.TextView[@text='Amigo Cobasi']").click
-    when "assinatura"
-      find_element(xpath: "//android.widget.TextView[@text='Assinatura']").click
-    end
-  end
-end
-
-class ModalAmigoCobasi
-  def modal_home
+  def modal_home_amigo_cobasi
     find_element(xpath: "//android.widget.TextView[@text='Faça sua adesão gratuita aqui']").click
-  end
-
-  def aceite_termos
-    find_element(xpath: "//android.widget.CheckBox").click
-  end
-
-  def realizar_adesao
-    find_element(xpath: "//android.widget.CheckBox[@checked='true']")
-    find_element(xpath: "//android.widget.Button").click
   end
 end

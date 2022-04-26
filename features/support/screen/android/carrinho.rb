@@ -3,10 +3,16 @@ class CarrinhoScreen
 
   def finalizar_compra
     find_element(xpath: "//android.widget.TextView[@text='Produtos']")
-    # scroll = { start_x: 0.46, start_y: 0.73, offset_x: 0.46, offset_y: 0.37, duration: 2000 }
-    # Appium::TouchAction.new.swipe(scroll).perform
     scroll("//android.widget.TextView[@text='Finalizar a compra']")
     btn_finalizar()
+  end
+
+  def adicionar_cep(cep)
+    find_element(xpath: "//android.widget.TextView[@text='Produtos']")
+    endereco = find_elements(xpath: "//android.widget.EditText")
+    endereco[1].send_keys(cep)
+    find_element(xpath: "//android.widget.TextView[@text='Buscar']").click
+    sleep 2
   end
 
   def btn_finalizar

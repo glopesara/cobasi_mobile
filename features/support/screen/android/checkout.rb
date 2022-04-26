@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class CheckoutScreen
   include Scroll
 
@@ -72,5 +73,13 @@ class CheckoutScreen
     find_element(xpath: "//android.widget.TextView[@text='Resumo do pedido']")
     scroll("//android.widget.TextView[@text='Finalizar pedido']")
     find_element(xpath: "//android.widget.TextView[@text='Finalizar pedido']").click
+  end
+
+  def chave_pix
+    find_element(xpath: "//android.widget.TextView[@text='Copie o código do pagamento']")
+  end
+
+  def view_pgm_instantane
+    find_element(xpath: "//android.widget.TextView[@text='Pagamento disponível até']")
   end
 end
