@@ -80,6 +80,7 @@ GEM
     ffi (1.15.0-x64-mingw32)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    json (2.6.1)
     macaddr (1.7.2)
       systemu (~> 2.6.5)
     method_source (1.0.0)
@@ -104,6 +105,8 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     racc (1.5.2)
+    report_builder (1.9)
+      json (>= 2.3.0)
     require_all (3.0.0)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -152,6 +155,7 @@ DEPENDENCIES
   cucumber
   faker (= 2.17)
   pry
+  report_builder
   rspec
 
 BUNDLED WITH

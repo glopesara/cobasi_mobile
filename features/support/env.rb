@@ -11,15 +11,11 @@ require "pry"
 FileUtils.rm_f(Dir.glob("logs/*.json"))
 FileUtils.rm_f(Dir.glob("logs/*.png"))
 
-# #carrega os capabilites
-# caps = Appium.load_appium_txt file: File.expand_path("caps/android-fisico.txt", __dir__), verbose: true
-# #inicializo uma instancia do drive do appium passando o parametro de capabilite
-# Appium::Driver.new(caps, true)
-# #vai fazer que dentro do cucumber sejam metodos nativos
-# Appium.promote_appium_methods Object
-
+#declara a variavel Device
 DEVICE = ENV["DEVICE_TYPE"]
-
+# #carrega os capabilites
 caps = Appium.load_appium_txt file: File.expand_path("caps/#{DEVICE}/appium.txt", __dir__), verbose: true
+# #inicializo uma instancia do drive do appium passando o parametro de capabilite
 Appium::Driver.new(caps, true)
+# #vai fazer que dentro do cucumber sejam metodos nativos
 Appium.promote_appium_methods Object

@@ -4,10 +4,4 @@ ios: -p json DEVICE_TYPE=ios
 android: -p json DEVICE_TYPE=android
 bdd: --format pretty --publish-quiet
 allure: --format AllureCucumber::CucumberFormatter --out=logs
-json: -f pretty
-
----
-# default: -p json -p android
-# ios: -p json DEVICE_TYPE=ios
-# android: -p json DEVICE_TYPE=android
-# json: -f json -o log/report.json -f pretty
+json: -f json -o log/report.json -f pretty
