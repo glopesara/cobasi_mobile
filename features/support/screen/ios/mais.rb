@@ -1,12 +1,15 @@
 # encoding: UTF-8
 class MaisScreenIos
+  include Scroll
+
   def selecionar_opcao(opcao)
     case opcao
     when "Login"
       find_element(xpath: "//XCUIElementTypeOther[@name='󰀉 Entre ou cadastre-se Para acessar seus dados 󰅂']").click
     when "Amigo Cobasi"
       sleep 1
-      find_element(xpath: "//android.widget.TextView[@text='Amigo Cobasi']").click
+      scroll("//XCUIElementTypeOther[@name='󰵰 Atendimento 󰅂']")
+      find_element(xpath: "//XCUIElementTypeOther[@name='Amigo Cobasi Ganhe pontos nas suas compras 󰅂']").click
     end
   end
 

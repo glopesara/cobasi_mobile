@@ -1,4 +1,6 @@
 # encoding: UTF-8
+require "report_builder"
+require "date"
 Before do
   #sobe o servidor do appium
   driver.start_driver
@@ -29,4 +31,22 @@ After do |scenario|
   )
   #fechar o drive
   driver.quit_driver
+end
+
+at_exit do
+  @infos = {
+    "device" => DEVICE.upcase,
+    "environment" => "Dev",
+    "Data do Teste" => Time.now.to_s,
+  }
+
+  ReportBuilder.configure do |config|
+    config.input_path = "log/report.json"
+    config.report_path = "log/report"
+    config.report_types = [:html]
+    config.report_title = "Pixel Mobile"
+    config.additional_info = @infos
+    config.color = "indigo"
+  end
+  ReportBuilder.build_report
 end

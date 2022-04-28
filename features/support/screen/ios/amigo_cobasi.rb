@@ -19,6 +19,6 @@ class AmigoCobasiScreenIos
   end
 
   def quadro_de_pontos
-    return find_element(xpath: "//android.widget.TextView[@text='Seus pontos']")
+    return find_element(xpath: "//XCUIElementTypeOther[contains(@name,'Seus pontos')]")
   end
 end
