@@ -42,7 +42,7 @@ Funcionalidade: Login
             | senha | Ga250400              |
             E acesse o meu "Mais"
         Então deve estar logado
-    @login @smoke  @teste
+    @login @smoke  
     Cenario: Login pelo menu meu desconto
         Dado que eu acesse o meu desconto
             E clico em pular
@@ -51,7 +51,7 @@ Funcionalidade: Login
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
         Então devo ver as ofertas
-    @login 
+    @login
     Cenario: Login pela assinatura (Mundo Cobasi)
         Dado que eu acesse a tela de assinatura pelo mundo cobasi
             E submeto minhas credenciais:

@@ -68,8 +68,8 @@
         
     
 
-    <h5>Login pelo amigo cobasi (50.424s)</h5>
-    features/specs/login.feature:12
+    <h5>Login com sucesso (24.412s)</h5>
+    features/specs/login.feature:5
 
     
         
@@ -84,19 +84,35 @@
 
     <ul class="collection stepList">
       
-          <li class="collection-item step passed">
+          <li class="collection-item step failed">
   
 
-  <b>Dado </b> que acesso a tela de amigo cobasi (8.467s)
-
-  
+  <b>Dado </b> que acesso a tela de Login (15.247s)
 
   
 
   
+
+  
   
   
 
+
+    
+    
+    
+    <pre>An element could not be located on the page using the given search parameters. (Selenium::WebDriver::Error::NoSuchElementError)
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at XCUITestDriver.doNativeFind (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:130:11)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at XCUITestDriver.findNativeElementOrElements (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:90:10)
+    at XCUITestDriver.findElOrEls (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:23:12)
+    at XCUITestDriver.findElOrElsWithProcessing (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:33:12)
+    at XCUITestDriver.findElement (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:53:10)
+./features/support/screen/ios/mais.rb:9:in `selecionar_opcao&#39;
+./features/steps/login_steps.rb:4:in `nil&#39;
+features/specs/login.feature:6:in `que acesso a tela de Login&#39;</pre>
 
 
 
@@ -106,10 +122,10 @@
 </li>
 
       
-          <li class="collection-item step failed">
+          <li class="collection-item step skipped">
   
 
-  <b>E </b> submeto minhas credenciais: (33.932s)
+  <b>E </b> submeto minhas credenciais: (0.000s)
 
   
 
@@ -136,22 +152,6 @@
   
 
 
-    
-    
-    
-    <pre>An element could not be located on the page using the given search parameters. (Selenium::WebDriver::Error::NoSuchElementError)
-NoSuchElementError: An element could not be located on the page using the given search parameters.
-    at XCUITestDriver.doNativeFind (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:130:11)
-    at runMicrotasks (&lt;anonymous&gt;)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at XCUITestDriver.findNativeElementOrElements (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:90:10)
-    at XCUITestDriver.findElOrEls (/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/lib/commands/find.js:23:12)
-    at XCUITestDriver.findElOrElsWithProcessing (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:33:12)
-    at XCUITestDriver.findElement (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:53:10)
-./features/support/screen/ios/login.rb:11:in `logar&#39;
-./features/steps/login_steps.rb:14:in `nil&#39;
-features/specs/login.feature:14:in `submeto minhas credenciais:&#39;</pre>
-
 
 
 
@@ -163,7 +163,7 @@ features/specs/login.feature:14:in `submeto minhas credenciais:&#39;</pre>
           <li class="collection-item step skipped">
   
 
-  <b>Então </b> tenho que ver o quadro de pontos (0.000s)
+  <b>Então </b> deve estar logado (0.000s)
 
   
 
@@ -237,7 +237,7 @@ features/specs/login.feature:14:in `submeto minhas credenciais:&#39;</pre>
   <div class="col m4 s12">
     <table id="metaData" class="bordered">
       <tbody>
-      <tr><th>Total Time</th><td>50.424s</td></tr>
+      <tr><th>Total Time</th><td>24.412s</td></tr>
       
           <tr>
             <th>device</th>
@@ -251,7 +251,7 @@ features/specs/login.feature:14:in `submeto minhas credenciais:&#39;</pre>
       
           <tr>
             <th>Data do Teste</th>
-            <td>2022-04-28 19:57:07 -0300</td>
+            <td>2022-04-29 16:44:30 -0300</td>
           </tr>
       
       </tbody>
@@ -268,14 +268,14 @@ features/specs/login.feature:14:in `submeto minhas credenciais:&#39;</pre>
       <li class="feature broken">
   <div class="collapsible-header indigo lighten-1 waves-effect waves-light">
     <i class="material-icons">featured_play_list</i>
-    <b>Funcionalidade</b>&nbsp;Login&nbsp;(50.424s)
+    <b>Funcionalidade</b>&nbsp;Login&nbsp;(24.412s)
   </div>
 
   <div class="collapsible-body indigo lighten-4">
     <div class="collection scenarioList indigo">
       
         <a class="collection-item scenario modal-trigger waves-effect waves-light white-text failed" href="#g0f0s0">
-          <b>Cenario</b> Login pelo amigo cobasi&nbsp;(50.424s)
+          <b>Cenario</b> Login com sucesso&nbsp;(24.412s)
         </a>
       
     </div>
@@ -312,7 +312,7 @@ features/specs/login.feature:14:in `submeto minhas credenciais:&#39;</pre>
 </td>
 
 <td class="hoverable modal-trigger white-text" data-target="g0f0s0">
-  Login pelo amigo cobasi
+  Login com sucesso
 </td>
 
 <td class="hide">
@@ -362,7 +362,7 @@ features/specs/login.feature:14:in `submeto minhas credenciais:&#39;</pre>
               
                   
                       <a class="collection-item failedScenario indigo lighten-5 red-text modal-trigger waves-effect waves-light" href="#g0f0s0">
-                        <i class="material-icons">highlight_off</i>&nbsp;Login pelo amigo cobasi
+                        <i class="material-icons">highlight_off</i>&nbsp;Login com sucesso
                       </a>
                   
               

@@ -5,7 +5,7 @@ Before do
   #sobe o servidor do appium
   driver.start_driver
   #timeout de 10 segundos
-  driver.manage.timeouts.implicit_wait = 30
+  driver.manage.timeouts.implicit_wait = 10
   #device_type = "ios"
 
   @screen = AndroidScreens.new if DEVICE.eql?("android")

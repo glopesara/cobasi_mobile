@@ -12,13 +12,13 @@ class Home
   def selecionar_opcao_menus(opcao)
     case opcao
     when "Mais"
-      find_element(xpath: "//android.widget.Button[@content-desc='Mais, tab, 5 of 6']").click
+      find_element(accessibility_id: "Mais, tab, 5 of 6").click
     when "Categorias"
-      find_element(xpath: "//android.widget.Button[@content-desc='Categorias, tab, 2 of 6']").click
+      find_element(accessibility_id: "Categorias, tab, 2 of 6").click
     when "Meu desconto"
-      find_element(xpath: "//android.widget.Button[@content-desc='Descontos, tab, 3 of 6']").click
+      find_element(accessibility_id: "Descontos, tab, 3 of 6").click
     when "Favoritos"
-      find_element(xpath: "//android.widget.Button[@content-desc='Favoritos, tab, 4 of 6']").click
+      find_element(accessibility_id: "Favoritos, tab, 4 of 6").click
     end
   end
 

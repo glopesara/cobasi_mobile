@@ -3,17 +3,16 @@ class MaisScreenIos
   include Scroll
 
   def selecionar_opcao(opcao)
+    find_element(accessibility_id: "󰂚 Notificações Mensagens pra você 󰅂")
     case opcao
     when "Login"
-      find_element(xpath: "//XCUIElementTypeOther[@name='󰀉 Entre ou cadastre-se Para acessar seus dados 󰅂']").click
+      find_element(accessibility_id: "󰀉 Entre ou cadastre-se Para acessar seus dados 󰅂").click
     when "Amigo Cobasi"
-      sleep 1
-      scroll("//XCUIElementTypeOther[@name='󰵰 Atendimento 󰅂']")
-      find_element(xpath: "//XCUIElementTypeOther[@name='Amigo Cobasi Ganhe pontos nas suas compras 󰅂']").click
+      find_element(accessibility_id: "Amigo Cobasi Ganhe pontos nas suas compras 󰅂").click
     end
   end
 
   def login_confirmado
-    return find_element(xpath: "//XCUIElementTypeStaticText[@name='Minha conta']")
+    find_element(accessibility_id: "Minha conta")
   end
 end

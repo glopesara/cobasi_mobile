@@ -18,6 +18,6 @@ class ProdutoScreenIos
   end
 
   def cod_produto
-    find_element(xpath: "//android.widget.TextView[contains(@text,'Código')]")
+    find_element(xpath: "//XCUIElementTypeStaticText[contains(@name,'Código:')]")
   end
 end

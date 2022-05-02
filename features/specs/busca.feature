@@ -1,22 +1,22 @@
-            #language: pt
+#language: pt
 
-            Funcionalidade: Busca
-            @busca @smoke
-            Cenario: Busca pelo nome do produto
-            Dado que eu realize a seguinte busca
+Funcionalidade: Busca
+    @busca @smoke
+    Cenario: Busca pelo nome do produto
+        Dado que eu realize a seguinte busca
             | nome | ração cachorro |
             E seleciono um produto
-            Então deve ver a tela de detalhes do produto
-            @busca @smoke @filtros
-            Esquema do Cenario: Busca por filtros
-            Dado que eu acesse o menu "Categorias"
+        Então deve ver a tela de detalhes do produto
+    @busca @smoke @filtros 
+    Esquema do Cenario: Busca por filtros
+        Dado que eu acesse o menu "Categorias"
             E selecione a "<categoria>"
             E seleciono a "<categoria_datalhes>"
             E seleciono o "<serviço>"
             E seleciono um produto
-            Então deve ver a tela de detalhes do produto
+        Então deve ver a tela de detalhes do produto
 
-            Exemplos:
+        Exemplos:
 
             | categoria          | categoria_datalhes   | serviço              |
             | Cachorros          | Ração                | Ração Seca           |
