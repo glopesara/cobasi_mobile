@@ -12,7 +12,7 @@ class LoginScreen
     find_element(xpath: "//android.widget.EditText").send_keys(usuario[:email])
     sleep 2
     find_element(xpath: "//android.widget.TextView[@text='Continuar']").click
-    sleep 2
+    find_element(xpath: "//android.widget.TextView[@text='Esqueci minha senha']")
     find_element(xpath: "//android.widget.EditText").send_keys(usuario[:senha])
     sleep 2
     find_element(xpath: "//android.widget.TextView[@text='Entrar']").click
@@ -30,12 +30,6 @@ class LoginScreen
     imput_senha[2].send_keys(usuario[:senha])
     sleep 2
     find_element(xpath: "//android.widget.TextView[@text='Entrar']").click
-  end
-
-  def logar_pwa(usuario)
-    find_element(xpath: "//android.widget.EditText[@resource-id='email']").send_keys(usuario[:email])
-    find_element(xpath: "//android.widget.EditText[@resource-id='password']").send_keys(usuario[:senha])
-    find_element(xpath: "//android.widget.Button[@text='Entrar']").click
     sleep 3
   end
 

@@ -1,3 +1,7 @@
-default: -p bdd -p allure
-bdd: --format pretty
+---
+default: -p bdd -p allure -p android
+ios: -p json DEVICE_TYPE=ios
+android: -p json DEVICE_TYPE=android
+bdd: --format pretty --publish-quiet
 allure: --format AllureCucumber::CucumberFormatter --out=logs
+json: -f json -o log/report.json -f pretty

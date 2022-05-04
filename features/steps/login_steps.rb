@@ -1,16 +1,17 @@
+# encoding: UTF-8
 Dado("que acesso a tela de Login") do
-  @navegador.selecionar_opcao_menus("Mais")
-  @mais.selecionar_opcao("Login")
+  @screen.home.selecionar_opcao_menus("Mais")
+  @screen.mais.selecionar_opcao("Login")
 end
 
 Dado("que acesso a tela de amigo cobasi") do
-  @navegador.selecionar_opcao_menus("Mais")
-  @mais.selecionar_opcao("Amigo Cobasi")
+  @screen.home.selecionar_opcao_menus("Mais")
+  @screen.mais.selecionar_opcao("Amigo Cobasi")
 end
 
 Quando("submeto minhas credenciais:") do |table|
   usuario = table.rows_hash
-  @login.logar(usuario)
+  @screen.login.logar(usuario)
 end
 
 Dado("submeto minhas credenciais de tentativa de login:") do |table|
@@ -19,7 +20,7 @@ Dado("submeto minhas credenciais de tentativa de login:") do |table|
 end
 
 Dado("acesse o meu {string}") do |string|
-  @navegador.selecionar_opcao_menus("Mais")
+  @screen.home.selecionar_opcao_menus("Mais")
 end
 
 Então("devo ver a mensagem {string}") do |alerta|
@@ -28,24 +29,26 @@ Então("devo ver a mensagem {string}") do |alerta|
 end
 
 Então("deve estar logado") do
-  resultado = find_element(xpath: "//android.widget.TextView[@text='Meus dados']")
+  resultado = @screen.mais.login_confirmado
   expect(resultado.displayed?).to be true
 end
 
 Dado("que acesso a tela de amigo cobasi pelo mundo cobasi") do
-  @mundo_cobasi.selecionar_opcao("amigo cobasi")
+  @screen.home.mundo_cobasi("amigo cobasi")
 end
 
 Dado("clico em favoritar produto") do
-  find_element(xpath: "//android.widget.TextView[@bounds='[972,1376][1032,1437]']").click
-end
-
-Dado("faço login no pwa:") do |table|
-  @login.selecionar_opcao("E-mail e senha")
-  usuario = table.rows_hash
-  @login.logar_pwa(usuario)
+  @screen.pdp.favoritar
 end
 
 Dado("que eu acesse a tela de assinatura pelo mundo cobasi") do
-  @mundo_cobasi.selecionar_opcao("assinatura")
+  @screen.home.mundo_cobasi("assinatura")
+end
+
+Dado("que eu acesse o menu de favoritos") do
+  @screen.home.selecionar_opcao_menus("Favoritos")
+end
+
+Dado("clico em entrar na conta") do
+  @screen.favoritos.entrar_na_conta
 end

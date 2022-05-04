@@ -1,0 +1,9 @@
+[caps]
+udid = "RQCRB01Q33B"
+deviceName = "s21"
+platformName = "Android"
+deviceName = "Emulator"
+appPackage = "com.root.cobasi.Activities"
+appActivity = "com.root.cobasi.Activities.MainActivity"
+unicodeKeyboard = true
+resetKeyboard = true

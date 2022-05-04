@@ -1,4 +1,4 @@
-module Scrollar
+module Scroll
   def scroll(elemento)
     ignorar_timeout()
     @i = 0
@@ -8,7 +8,7 @@ module Scrollar
       @condicao = false
     end
     while @condicao == false
-      scroll = { start_x: 0.46, start_y: 900, end_x: 0.46, end_y: 200, duration: 2000 }
+      scroll = { start_x: 0.46, start_y: 700, end_x: 0.46, end_y: 200, duration: 2000 }
       Appium::TouchAction.new.swipe(scroll).perform
       @i += 1
 
@@ -17,7 +17,7 @@ module Scrollar
       rescue
         @condicao = false
       end
-      if @i == 5
+      if @i == 8
         puts "NÃO FOI POSSIVEL LOCALIZAR O ELEMENTO"
         throw
       end

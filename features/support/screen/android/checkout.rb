@@ -1,5 +1,6 @@
+# encoding: UTF-8
 class CheckoutScreen
-  include Scrollar
+  include Scroll
 
   def btn_continuar
     sleep 3
@@ -28,7 +29,7 @@ class CheckoutScreen
   end
 
   def selecionar_entrega(frete)
-    find_element(xpath: "//android.widget.TextView[contains(@text, 'Subtotal:')]")
+    find_element(xpath: "//android.widget.TextView[contains(@text, 'Selecione uma opção:')]")
     scroll("//android.widget.TextView[contains(@text,'#{frete}')]")
     find_element(xpath: "//android.widget.TextView[contains(@text,'#{frete}')]").click
     scroll("//android.widget.TextView[@text='Ir para pagamento']")
@@ -62,8 +63,8 @@ class CheckoutScreen
     end
   end
 
-  def pagamento_boleto
-    find_element(xpath: "//android.widget.TextView[@text='Boleto Bancário']").click
+  def forma_pagamento(opcao)
+    find_element(xpath: "//android.widget.TextView[@text='#{opcao}']").click
     scroll("//android.widget.TextView[@text='Continuar para revisão']")
     find_element(xpath: "//android.widget.TextView[@text='Continuar para revisão']").click
   end
@@ -72,5 +73,13 @@ class CheckoutScreen
     find_element(xpath: "//android.widget.TextView[@text='Resumo do pedido']")
     scroll("//android.widget.TextView[@text='Finalizar pedido']")
     find_element(xpath: "//android.widget.TextView[@text='Finalizar pedido']").click
+  end
+
+  def chave_pix
+    find_element(xpath: "//android.widget.TextView[@text='Copie o código do pagamento']")
+  end
+
+  def view_pgm_instantane
+    find_element(xpath: "//android.widget.TextView[@text='Pagamento disponível até']")
   end
 end

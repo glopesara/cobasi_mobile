@@ -7,7 +7,7 @@ Funcionalidade: Busca
             | nome | bolinha |
             E seleciono um produto
         Então deve ver a tela de detalhes do produto
-    @filtros @smoke  
+    @busca @smoke @filtros 
     Esquema do Cenario: Busca por filtros
         Dado que eu acesse o menu "Categorias"
             E selecione a "<categoria>"
@@ -22,8 +22,8 @@ Funcionalidade: Busca
             | Cachorros          | Ração                | Ração Seca           |
             | Gatos              | Tocas e Caminhas     | Tocas                |
             | Pássaros           | Brinquedos           |                      |
-            # | Peixes             | Aquários             |                      |
-            # | Outros Pets        | Roedores             | Ração e Alimentos    |
-            # | Casa e Jardim      | Lazer                | Lazer                |
-            # | Linha Profissional | Tratamento e Higiene | Shampoo Profissional |
-            # | Marcas             | Petmais              |                      |
+            | Peixes             | Aquários             | Aquários             |
+            | Outros Pets        | Roedores             | Ração e Alimentos    |
+            | Casa e Jardim      | Lazer                | Lazer                |
+            | Linha Profissional | Tratamento e Higiene | Shampoo Profissional |
+            | Marcas             | Petmais              |                      |

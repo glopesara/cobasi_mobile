@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Fluxo de compras
-    @compra @smoke @pwa 
+    @compra @smoke @nativa
     Cenario: Realizar compra com Bolteto 1
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
@@ -18,10 +18,10 @@ Funcionalidade: Fluxo de compras
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
-    @compra @smoke @pwa 
+    @compra @smoke
     Cenario: Realizar compra com Bolteto 2
         Dado que eu realize a seguinte busca
-            | nome | ração gato |
+            | nome | ração cachorro |
             E seleciono um produto
             E clico no botão comprar
             E clico em ver carrinho no alerta
@@ -37,8 +37,46 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
 
-    @compra @agendamento @smoke @nativa @blue
-    Cenario: Realizar compra com Bolteto usuario ja existente com agendamento
+    @compra @smoke @pix @nativa
+    Cenario: Realizar compra com pix
+        Dado que eu realize a seguinte busca
+            | nome | ração cachorro |
+            E seleciono um produto
+            E clico no botão comprar
+            E clico em ver carrinho no alerta
+            E clico em finalizar comprar
+            E adiciono o CEP '85030120'
+            E clico em finalizar comprar
+            E submeto minhas credenciais:
+            | email | glopesarasp@gmail.com |
+            | senha | Ga250400              |
+            E clico em continuar para entrega
+            E seleciono o frete Economica
+            E seleciono a  forma de pagamento como pix
+            E clico em finalizar pedido
+        Então devo ver a tela com a chave pix para pagamento
+
+    @compra @smoke @pagamentointantaneo @nativa
+    Cenario: Realizar compra com Pagamento instantâneo
+        Dado que eu realize a seguinte busca
+            | nome | ração cachorro |
+            E seleciono um produto
+            E clico no botão comprar
+            E clico em ver carrinho no alerta
+            E clico em finalizar comprar
+            E adiciono o CEP '85030120'
+            E clico em finalizar comprar
+            E submeto minhas credenciais:
+            | email | glopesarasp@gmail.com |
+            | senha | Ga250400              |
+            E clico em continuar para entrega
+            E seleciono o frete Economica
+            E seleciono a  forma de pagamento como Pagamento instantâneo
+            E clico em finalizar pedido
+        Então devo ver a tela de formas de Pagamento instantâneo
+
+    @compra @agendamento @smoke
+    Cenario: Realizar compra com Bolteto entrega por agendamento
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
             E seleciono um produto
@@ -53,6 +91,7 @@ Funcionalidade: Fluxo de compras
             E seleciono o agendamento da entrega
             E seleciono a  forma de pagamento como Boleto Bancário
             E clico em finalizar pedido
+        Então devo ver a tela de pedido realizado com sucusso
 
 #        @cartão
 # Cenario: Realizar compra com Cartão de credito usuario novo

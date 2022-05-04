@@ -1,18 +1,15 @@
+# encoding: UTF-8
+require "report_builder"
+require "date"
 Before do
-  @navegador = Navegador.new
-  @mais = MaisScreen.new
-  @login = LoginScreen.new
-  @catalogo = CatalogoScreen.new
-  @tela_produto = ProdutoScreen.new
-  @carrinho = CarrinhoScreen.new
-  @checkout = CheckoutScreen.new
-  @amigo_cobasi = AmigoCobasiScreen.new
-  @modal_amigo_cobasi = ModalAmigoCobasi.new
-  @mundo_cobasi = MundoCobasi.new
   #sobe o servidor do appium
   driver.start_driver
   #timeout de 10 segundos
-  driver.manage.timeouts.implicit_wait = 40
+  driver.manage.timeouts.implicit_wait = 10
+  #device_type = "ios"
+
+  @screen = AndroidScreens.new if DEVICE.eql?("android")
+  @screen = IOSScreens.new if DEVICE.eql?("ios")
 end
 
 After do |scenario|
@@ -34,4 +31,22 @@ After do |scenario|
   )
   #fechar o drive
   driver.quit_driver
+end
+
+at_exit do
+  @infos = {
+    "device" => DEVICE.upcase,
+    "environment" => "Dev",
+    "Data do Teste" => Time.now.to_s,
+  }
+
+  ReportBuilder.configure do |config|
+    config.input_path = "log/report.json"
+    config.report_path = "log/report"
+    config.report_types = [:html]
+    config.report_title = "Pixel Mobile"
+    config.additional_info = @infos
+    config.color = "indigo"
+  end
+  ReportBuilder.build_report
 end

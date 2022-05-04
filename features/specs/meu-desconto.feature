@@ -4,26 +4,28 @@ Funcionalidade: Meu desconto
     @meudesconto @smoke
     Cenario: Validar acesso ao meu desconto
         Dado que eu realize o login com
-            | email | gabriel.lopes.ara@gmail.com |
+            | email | glopesarasp@gmail.com |
             | senha | Ga250400                    |
             E acesse o meu desconto
             E clico em pular
         Então devo ver as ofertas
-    # @meudescontocompra
-    # Cenario: Relaizar compra de uma oferta com desconto
-    #     Dado que eu realize o login com
-    #         | email | gabriel.lopes.ara@gmail.com |
-    #         | senha | Ga250400                    |
-    #         E acesse o meu desconto
-    #         E clico em pular
-    #         E vou para descontos ativos
-    #         E seleciono todos os descontos ativos
-    #         E clico em adicionar ao carrinho
-    #         E clico em finalizar comprar
-    #         E clico em ir para entrega
-    #         E seleciono o frete Economica
-    #         E seleciono a  forma de pagamento como Boleto Bancário
-    # E clico em finalizar pedido
+
+        
+# @meudescontocompra
+# Cenario: Relaizar compra de uma oferta com desconto
+#     Dado que eu realize o login com
+#         | email | glopesarasp@gmail.com |
+#         | senha | Ga250400                    |
+#         E acesse o meu desconto
+#         E clico em pular
+#         E vou para descontos ativos
+#         E seleciono todos os descontos ativos
+#         E clico em adicionar ao carrinho
+#         E clico em finalizar comprar
+#         E clico em ir para entrega
+#         E seleciono o frete Economica
+#         E seleciono a  forma de pagamento como Boleto Bancário
+# E clico em finalizar pedido
 # Então devo ver a tela de pedido realizado com sucusso
 # @adesao
 # Cenario: Realizar adesão no meu desconto

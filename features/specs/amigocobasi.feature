@@ -3,21 +3,21 @@ Funcionalidade: Amigo cobasi
     @smoke @amigocobasi
     Cenario: Acesso a tela amigo cobasi
         Dado que eu realize o login com
-            | email | gabriel.lopes.ara@gmail.com |
+            | email | glopesarasp@gmail.com |
             | senha | Ga250400                    |
             E entre no menu amigo cobasi
         Então tenho que ver o quadro de pontos
-
+    @amigocobasi
     Cenario: Acesso a tela amigo cobasi (mundo cobasi)
         Dado que acesso a tela de amigo cobasi pelo mundo cobasi
-            E faço login no pwa:
-            | email | gabriel.lopes.ara@gmail.com |
+            E submeto minhas credenciais:
+            | email | glopesarasp@gmail.com |
             | senha | Ga250400                    |
         Então tenho que ver o quadro de pontos
 # @cadastroamigocobasi
 # Cenario: Op-tin amigo Cobasi home
 #     Dado que eu realize o login com
-#         | email | gabriel.lopes.ara@gmail.com |
+#         | email | glopesarasp@gmail.com |
 #         | senha | Ga250400                    |
 #         E selecione faça a desão gratuita aqui
 #         E aceite os termos
