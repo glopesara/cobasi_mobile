@@ -10,7 +10,7 @@ Funcionalidade: Fluxo de compras
             E clico em ver carrinho no alerta
             E adiciono o CEP '85030120'
             E clico em finalizar comprar
-            E e faço login no checkout:
+            E submeto minhas credenciais:
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
             E clico em continuar para entrega
@@ -28,7 +28,7 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar comprar
             E adiciono o CEP '85030120'
             E clico em finalizar comprar
-            E e faço login no checkout:
+            E submeto minhas credenciais:
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
             E clico em continuar para entrega
@@ -47,7 +47,7 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar comprar
             E adiciono o CEP '85030120'
             E clico em finalizar comprar
-            E e faço login no checkout:
+            E submeto minhas credenciais:
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
             E clico em continuar para entrega
@@ -66,7 +66,7 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar comprar
             E adiciono o CEP '85030120'
             E clico em finalizar comprar
-            E e faço login no checkout:
+            E submeto minhas credenciais:
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
             E clico em continuar para entrega
@@ -84,7 +84,7 @@ Funcionalidade: Fluxo de compras
             E clico em ver carrinho no alerta
             E adiciono o CEP '09230600'
             E clico em finalizar comprar
-            E e faço login no checkout:
+            E submeto minhas credenciais:
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
             E clico em continuar para entrega

@@ -11,9 +11,7 @@ Funcionalidade: Login
     @login @smoke 
     Cenario: Login pelo amigo cobasi
         Dado que acesso a tela de amigo cobasi
-            #  E faço login no pwa:
             E submeto minhas credenciais:
-             
             | email | glopesarasp@gmail.com |
             | senha | Ga250400              |
         Então tenho que ver o quadro de pontos
@@ -22,7 +20,7 @@ Funcionalidade: Login
         Dado que acesso a tela de amigo cobasi pelo mundo cobasi
             E submeto minhas credenciais:
             | email | glopesarasp@gmail.com |
-            | senha | Ga250400                    |
+            | senha | Ga250400              |
         Então tenho que ver o quadro de pontos
     @login @smoke 
     Cenario: Realizar login pelo favoritos
@@ -33,7 +31,7 @@ Funcionalidade: Login
             | senha | Ga250400              |
             E acesse o meu "Mais"
         Então deve estar logado
-    @login @smoke 
+    @login @smoke @teste
     Cenario: Realizar login pelo favoritos (busca)
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |

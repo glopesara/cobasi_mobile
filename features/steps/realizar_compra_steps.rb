@@ -73,8 +73,3 @@ Então("devo ver a tela de formas de Pagamento instantâneo") do
   resultado = @screen.checkout.view_pgm_instantane
   expect(resultado.displayed?).to be true
 end
-
-Dado("e faço login no checkout:") do |table|
-  usuario = table.rows_hash
-  @screen.login.login_checkout(usuario)
-end
