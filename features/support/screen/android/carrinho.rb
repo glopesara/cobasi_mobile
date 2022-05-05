@@ -9,10 +9,11 @@ class CarrinhoScreen
 
   def adicionar_cep(cep)
     find_element(xpath: "//android.widget.TextView[@text='Produtos']")
+    sleep 5
     endereco = find_elements(xpath: "//android.widget.EditText")
     endereco[1].send_keys(cep)
     find_element(xpath: "//android.widget.TextView[@text='Buscar']").click
-    sleep 2
+    sleep 5
   end
 
   def btn_finalizar

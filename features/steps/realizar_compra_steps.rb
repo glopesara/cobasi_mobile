@@ -76,5 +76,5 @@ end
 
 Dado("e faço login no checkout:") do |table|
   usuario = table.rows_hash
-  @login.login_checkout(usuario)
+  @screen.login.login_checkout(usuario)
 end

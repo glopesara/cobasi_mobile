@@ -1,9 +1,0 @@
-[caps]
-udid = "127.0.0.1:62001"
-automationName = "UiAutomator2"
-platformName = "Android"
-deviceName = "Emulator"
-appPackage = "com.root.cobasi.Activities"
-appActivity = "com.root.cobasi.Activities.MainActivity"
-unicodeKeyboard = true
-resetKeyboard = true

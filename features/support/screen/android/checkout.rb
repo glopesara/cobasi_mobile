@@ -80,6 +80,6 @@ class CheckoutScreen
   end
 
   def view_pgm_instantane
-    find_element(xpath: "//android.widget.TextView[@text='Pagamento disponível até']")
+    find_element(xpath: "//android.view.View[@text='Pagamento disponível até']")
   end
 end
