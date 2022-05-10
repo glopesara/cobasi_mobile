@@ -60,16 +60,14 @@
 
     
         
-            <div class="chip"><i class="material-icons rotate-45">label</i>@login</div>
+            <div class="chip"><i class="material-icons rotate-45">label</i>@compra</div>
         
             <div class="chip"><i class="material-icons rotate-45">label</i>@smoke</div>
         
-            <div class="chip"><i class="material-icons rotate-45">label</i>@teste</div>
-        
     
 
-    <h5>Realizar login pelo favoritos (busca) (1m 19.78s)</h5>
-    features/specs/login.feature:35
+    <h5>Realizar compra com Bolteto 1 (1m 34.92s)</h5>
+    features/specs/realizar-compra.feature:5
 
     
         
@@ -87,7 +85,7 @@
           <li class="collection-item step passed">
   
 
-  <b>Dado </b> que eu realize a seguinte busca (29.938s)
+  <b>Dado </b> que eu realize a seguinte busca (21.936s)
 
   
 
@@ -118,7 +116,7 @@
           <li class="collection-item step passed">
   
 
-  <b>E </b> seleciono um produto (5.014s)
+  <b>E </b> seleciono um produto (2.605s)
 
   
 
@@ -140,7 +138,336 @@
           <li class="collection-item step passed">
   
 
-  <b>E </b> clico em favoritar produto (8.223s)
+  <b>E </b> clico no botão comprar (21.063s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step failed">
+  
+
+  <b>E </b> clico em ver carrinho no alerta (32.826s)
+
+  
+
+  
+
+  
+  
+  
+
+
+    
+    
+    
+    <pre>An element could not be located on the page using the given search parameters. (Selenium::WebDriver::Error::NoSuchElementError)
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (/usr/local/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:33:12)
+    at AndroidUiautomator2Driver.findElement (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/basedriver/commands/find.js:53:10)
+./features/support/screen/android/pdp.rb:17:in `alerta_carrinho&#39;
+./features/steps/realizar_compra_steps.rb:7:in `nil&#39;
+features/specs/realizar-compra.feature:10:in `clico em ver carrinho no alerta&#39;</pre>
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>E </b> adiciono o CEP &#39;85030120&#39; (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>E </b> clico em finalizar comprar (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>E </b> submeto minhas credenciais: (0.000s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              email | 
+          
+              glopesarasp@gmail.com | 
+          
+      
+          <br/>| 
+          
+              senha | 
+          
+              Ga250400 | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>E </b> clico em continuar para entrega (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>E </b> seleciono o frete Economica (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>E </b> seleciono a  forma de pagamento como Boleto Bancário (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>E </b> clico em finalizar pedido (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step skipped">
+  
+
+  <b>Então </b> devo ver a tela de pedido realizado com sucusso (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+            
+
+
+
+
+
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s1" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@compra</div>
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@smoke</div>
+        
+    
+
+    <h5>Realizar compra com Bolteto 2 (2m 31.23s)</h5>
+    features/specs/realizar-compra.feature:22
+
+    
+        
+            
+
+
+
+
+
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que eu realize a seguinte busca (11.484s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              nome | 
+          
+              ração cachorro | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono um produto (3.374s)
 
   
 
@@ -162,7 +489,117 @@
           <li class="collection-item step passed">
   
 
-  <b>E </b> submeto minhas credenciais: (22.422s)
+  <b>E </b> clico no botão comprar (18.076s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em ver carrinho no alerta (3.094s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar comprar (38.935s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> adiciono o CEP &#39;85030120&#39; (5.088s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar comprar (0.810s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> submeto minhas credenciais: (6.506s)
 
   
 
@@ -200,7 +637,7 @@
           <li class="collection-item step passed">
   
 
-  <b>E </b> acesse o meu &quot;Mais&quot; (0.226s)
+  <b>E </b> clico em continuar para entrega (5.071s)
 
   
 
@@ -222,7 +659,1134 @@
           <li class="collection-item step passed">
   
 
-  <b>Então </b> deve estar logado (3.808s)
+  <b>E </b> seleciono o frete Economica (5.175s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono a  forma de pagamento como Boleto Bancário (3.969s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar pedido (13.294s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> devo ver a tela de pedido realizado com sucusso (18.411s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+            
+
+
+
+
+
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s2" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@compra</div>
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@smoke</div>
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@pix</div>
+        
+    
+
+    <h5>Realizar compra com pix (1m 36.82s)</h5>
+    features/specs/realizar-compra.feature:41
+
+    
+        
+            
+
+
+
+
+
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que eu realize a seguinte busca (11.916s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              nome | 
+          
+              ração cachorro | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono um produto (2.690s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico no botão comprar (8.615s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em ver carrinho no alerta (2.706s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar comprar (6.146s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> adiciono o CEP &#39;85030120&#39; (5.067s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar comprar (1.570s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> submeto minhas credenciais: (8.307s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              email | 
+          
+              glopesarasp@gmail.com | 
+          
+      
+          <br/>| 
+          
+              senha | 
+          
+              Ga250400 | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em continuar para entrega (5.453s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono o frete Economica (6.002s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono a  forma de pagamento como pix (1.260s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar pedido (12.737s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> devo ver a tela com a chave pix para pagamento (9.645s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+            
+
+
+
+
+
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s3" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@compra</div>
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@smoke</div>
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@pagamentointantaneo</div>
+        
+    
+
+    <h5>Realizar compra com Pagamento instantâneo (1m 33.51s)</h5>
+    features/specs/realizar-compra.feature:60
+
+    
+        
+            
+
+
+
+
+
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que eu realize a seguinte busca (10.879s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              nome | 
+          
+              ração cachorro | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono um produto (2.449s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico no botão comprar (7.702s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em ver carrinho no alerta (2.596s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar comprar (5.438s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> adiciono o CEP &#39;85030120&#39; (5.140s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar comprar (0.760s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> submeto minhas credenciais: (6.378s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              email | 
+          
+              glopesarasp@gmail.com | 
+          
+      
+          <br/>| 
+          
+              senha | 
+          
+              Ga250400 | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em continuar para entrega (3.698s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono o frete Economica (5.146s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono a  forma de pagamento como Pagamento instantâneo (1.129s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar pedido (12.466s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> devo ver a tela de formas de Pagamento instantâneo (15.511s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+            
+
+
+
+
+
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s4" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@compra</div>
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@agendamento</div>
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@smoke</div>
+        
+    
+
+    <h5>Realizar compra com Bolteto entrega por agendamento (2m 9.54s)</h5>
+    features/specs/realizar-compra.feature:79
+
+    
+        
+            
+
+
+
+
+
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que eu realize a seguinte busca (11.062s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              nome | 
+          
+              ração cachorro | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono um produto (3.262s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico no botão comprar (8.516s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em ver carrinho no alerta (2.770s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> adiciono o CEP &#39;09230600&#39; (10.222s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar comprar (2.515s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> submeto minhas credenciais: (7.325s)
+
+  
+
+  
+      
+          <br/>| 
+          
+              email | 
+          
+              glopesarasp@gmail.com | 
+          
+      
+          <br/>| 
+          
+              senha | 
+          
+              Ga250400 | 
+          
+      
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em continuar para entrega (4.970s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono o agendamento da entrega (26.741s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> seleciono a  forma de pagamento como Boleto Bancário (5.585s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> clico em finalizar pedido (13.889s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> devo ver a tela de pedido realizado com sucusso (19.024s)
 
   
 
@@ -270,6 +1834,14 @@
         
         $('#g0f0s1').modal();
         
+        $('#g0f0s2').modal();
+        
+        $('#g0f0s3').modal();
+        
+        $('#g0f0s4').modal();
+        
+        $('#g0f0s5').modal();
+        
     });
 </script>
 
@@ -296,7 +1868,7 @@
   <div class="col m4 s12">
     <table id="metaData" class="bordered">
       <tbody>
-      <tr><th>Total Time</th><td>1m 19.78s</td></tr>
+      <tr><th>Total Time</th><td>9m 26.02s</td></tr>
       
           <tr>
             <th>device</th>
@@ -310,7 +1882,7 @@
       
           <tr>
             <th>Data do Teste</th>
-            <td>2022-05-05 15:45:21 -0300</td>
+            <td>2022-05-10 10:47:56 -0300</td>
           </tr>
       
       </tbody>
@@ -324,17 +1896,33 @@
           <ul class="featureList collapsible popout" data-collapsible="expandable">
   
       
-      <li class="feature working">
+      <li class="feature broken">
   <div class="collapsible-header indigo lighten-1 waves-effect waves-light">
     <i class="material-icons">featured_play_list</i>
-    <b>Funcionalidade</b>&nbsp;Login&nbsp;(1m 19.78s)
+    <b>Funcionalidade</b>&nbsp;Fluxo de compras&nbsp;(9m 26.02s)
   </div>
 
   <div class="collapsible-body indigo lighten-4">
     <div class="collection scenarioList indigo">
       
-        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s0">
-          <b>Cenario</b> Realizar login pelo favoritos (busca)&nbsp;(1m 19.78s)
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text failed" href="#g0f0s0">
+          <b>Cenario</b> Realizar compra com Bolteto 1&nbsp;(1m 34.92s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s1">
+          <b>Cenario</b> Realizar compra com Bolteto 2&nbsp;(2m 31.23s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s2">
+          <b>Cenario</b> Realizar compra com pix&nbsp;(1m 36.82s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s3">
+          <b>Cenario</b> Realizar compra com Pagamento instantâneo&nbsp;(1m 33.51s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s4">
+          <b>Cenario</b> Realizar compra com Bolteto entrega por agendamento&nbsp;(2m 9.54s)
         </a>
       
     </div>
@@ -365,23 +1953,157 @@
   
       
           
-          <tr class="passed">
+          <tr class="failed">
             <td class="hide-on-small-only">
-  Login
+  Fluxo de compras
 </td>
 
 <td class="hoverable modal-trigger white-text" data-target="g0f0s0">
-  Realizar login pelo favoritos (busca)
+  Realizar compra com Bolteto 1
 </td>
 
 <td class="hide">
   
       
-          @login. 
+          @compra. 
       
           @smoke. 
       
-          @teste. 
+  
+</td>
+
+<td class="uppercase">
+  failed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+      An element could not be located on the page using the given search parameters. (Selenium::WebDriver::Error::NoSuchElementError)
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Fluxo de compras
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s1">
+  Realizar compra com Bolteto 2
+</td>
+
+<td class="hide">
+  
+      
+          @compra. 
+      
+          @smoke. 
+      
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Fluxo de compras
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s2">
+  Realizar compra com pix
+</td>
+
+<td class="hide">
+  
+      
+          @compra. 
+      
+          @smoke. 
+      
+          @pix. 
+      
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Fluxo de compras
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s3">
+  Realizar compra com Pagamento instantâneo
+</td>
+
+<td class="hide">
+  
+      
+          @compra. 
+      
+          @smoke. 
+      
+          @pagamentointantaneo. 
+      
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Fluxo de compras
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s4">
+  Realizar compra com Bolteto entrega por agendamento
+</td>
+
+<td class="hide">
+  
+      
+          @compra. 
+      
+          @agendamento. 
+      
+          @smoke. 
       
   
 </td>
@@ -406,6 +2128,37 @@
 
         <div id="errors" class="col s12 indigo lighten-5">
           <ul class="errorList collapsible popout" data-collapsible="expandable">
+  
+      <li class="error">
+  <div class="collapsible-header red lighten-2 white-text waves-effect waves-light">
+    <i class="material-icons">bug_report</i>An element could not be located on the page using the given search parameters. (Selenium::WebDriver::Error::NoSuchElementError)
+  </div>
+
+  <div class="collapsible-body indigo lighten-4">
+    <div class="collection failedScenarioList">
+      
+          
+              
+                  
+                      <a class="collection-item failedScenario indigo lighten-5 red-text modal-trigger waves-effect waves-light" href="#g0f0s0">
+                        <i class="material-icons">highlight_off</i>&nbsp;Realizar compra com Bolteto 1
+                      </a>
+                  
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+      
+    </div>
+  </div>
+</li>
+
   
 </ul>
 

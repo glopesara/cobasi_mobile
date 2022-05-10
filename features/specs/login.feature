@@ -31,7 +31,7 @@ Funcionalidade: Login
             | senha | Ga250400              |
             E acesse o meu "Mais"
         Então deve estar logado
-    @login @smoke @teste
+    @login @smoke
     Cenario: Realizar login pelo favoritos (busca)
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
