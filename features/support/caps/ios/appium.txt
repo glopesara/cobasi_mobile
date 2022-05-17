@@ -1,9 +1,13 @@
 [caps]
 automationName = "XCUITest"
-udid = "0E048CBA-4256-4598-A423-31EF264A86F2"
+udid = "34F72790-0CB9-44F0-A72B-AAF12852208B"
 platformVersion = "15.4"
 deviceName = "iPhone 12 Simulator"
-bundleId = "com.mobfiq.cobasiTemporario"
+app = "/Users/usermaitha/Library/Developer/Xcode/DerivedData/cobasi-gmybkfeuglrcypdswoyntyycylpj/Build/Products/Debug-iphonesimulator/Cobasi.app"
 platformName = "iOS"
 newCommandTimeout = "100000"
 adbExecTimeout = "100000"
+locationServicesAuthorized = true
+locationServicesEnabled = true
+autoAcceptAlerts = true
+autoDismissAlerts = false

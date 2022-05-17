@@ -5,7 +5,7 @@ Before do
   #sobe o servidor do appium
   driver.start_driver
   #timeout de 10 segundos
-  driver.manage.timeouts.implicit_wait = 10
+  driver.manage.timeouts.implicit_wait = 30
   #device_type = "ios"
 
   @screen = AndroidScreens.new if DEVICE.eql?("android")
@@ -15,7 +15,7 @@ end
 After do |scenario|
   #chama o driver do appium e tira uma foto
   binary_shot = driver.screenshot_as(:base64)
-
+  attach(binary_shot, "image/png")
   #diretorio para salvar a evidencia
   temp_shot = "logs/temp_shot.png"
 
@@ -44,7 +44,7 @@ at_exit do
     config.input_path = "log/report.json"
     config.report_path = "log/report"
     config.report_types = [:html]
-    config.report_title = "Pixel Mobile"
+    config.report_title = "Cobasi APP"
     config.additional_info = @infos
     config.color = "indigo"
   end

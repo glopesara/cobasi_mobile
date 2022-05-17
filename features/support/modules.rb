@@ -17,7 +17,8 @@ module Scroll
       rescue
         @condicao = false
       end
-      if @i == 5
+      sleep 1
+      if @i == 10
         puts "NÃO FOI POSSIVEL LOCALIZAR O ELEMENTO"
         throw
       end
