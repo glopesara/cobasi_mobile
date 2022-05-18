@@ -1,3 +1,5 @@
 logs/
+log/report.html
+log/report.json
 temp.txt
-usual.txt
+Gemfile.lock
