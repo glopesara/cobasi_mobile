@@ -75,6 +75,25 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar pedido
         Então devo ver a tela de formas de Pagamento instantâneo
 
+          @smoke @pagamentointantaneo @nubank
+    Cenario: Realizar compra com Nubank
+        Dado que eu realize a seguinte busca
+            | nome | ração cachorro |
+            E seleciono um produto
+            E clico no botão comprar
+            E clico em ver carrinho no alerta
+            E clico em finalizar comprar
+            E adiciono o CEP '09230600'
+            E clico em finalizar comprar
+            E submeto minhas credenciais:
+            | email | gabriel.lopes.ara@gmail.com |
+            | senha | Ga250400              |
+            E clico em continuar para entrega
+            E seleciono o frete Economica
+            E seleciono a  forma de pagamento como Nubank
+            E clico em finalizar pedido
+        Então devo ver a view da Nubank
+
     @compra @agendamento @smoke
     Cenario: Realizar compra com Bolteto entrega por agendamento
         Dado que eu realize a seguinte busca

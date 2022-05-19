@@ -82,4 +82,8 @@ class CheckoutScreen
   def view_pgm_instantane
     find_element(xpath: "//android.widget.TextView[@text='Pagamento disponível até']")
   end
+
+  def view_nubank
+    find_element(xpath: "//android.widget.Image[@text='NU']")
+  end
 end
