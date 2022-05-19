@@ -1,5 +1,5 @@
 module Scroll
-  def scroll(elemento)
+  def scroll_android(elemento)
     ignorar_timeout()
     @i = 0
     begin
@@ -8,7 +8,7 @@ module Scroll
       @condicao = false
     end
     while @condicao == false
-      scroll = { start_x: 0.46, start_y: 700, end_x: 0.46, end_y: 200, duration: 2000 }
+      scroll = { start_x: 0.46, start_y: 950, end_x: 0.46, end_y: 200, duration: 2000 }
       Appium::TouchAction.new.swipe(scroll).perform
       @i += 1
 

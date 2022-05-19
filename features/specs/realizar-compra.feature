@@ -1,7 +1,7 @@
 #language: pt
 
 Funcionalidade: Fluxo de compras
-    @compra @smoke @nativa
+    @compra @smoke 
     Cenario: Realizar compra com Bolteto 1
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
@@ -37,7 +37,7 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar pedido
         Então devo ver a tela de pedido realizado com sucusso
 
-    @compra @smoke @pix @nativa
+    @compra @smoke @pix 
     Cenario: Realizar compra com pix
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |
@@ -56,7 +56,7 @@ Funcionalidade: Fluxo de compras
             E clico em finalizar pedido
         Então devo ver a tela com a chave pix para pagamento
 
-    @compra @smoke @pagamentointantaneo @nativa
+    @compra @smoke @pagamentointantaneo 
     Cenario: Realizar compra com Pagamento instantâneo
         Dado que eu realize a seguinte busca
             | nome | ração cachorro |

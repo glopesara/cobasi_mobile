@@ -20,7 +20,7 @@ class CheckoutScreen
 
   def entrega_btn
     find_element(xpath: "//android.widget.TextView[contains(@text,'Mantenha seus')]")
-    scroll("//android.widget.TextView[@text='Continuar para a entrega']")
+    scroll_android("//android.widget.TextView[@text='Continuar para a entrega']")
     clcik_btn_entrega()
   end
 
@@ -30,9 +30,9 @@ class CheckoutScreen
 
   def selecionar_entrega(frete)
     find_element(xpath: "//android.widget.TextView[contains(@text, 'Selecione uma opção:')]")
-    scroll("//android.widget.TextView[contains(@text,'#{frete}')]")
+    scroll_android("//android.widget.TextView[contains(@text,'#{frete}')]")
     find_element(xpath: "//android.widget.TextView[contains(@text,'#{frete}')]").click
-    scroll("//android.widget.TextView[@text='Ir para pagamento']")
+    scroll_android("//android.widget.TextView[@text='Ir para pagamento']")
     pagamento_btn()
   end
 
@@ -65,13 +65,13 @@ class CheckoutScreen
 
   def forma_pagamento(opcao)
     find_element(xpath: "//android.widget.TextView[@text='#{opcao}']").click
-    scroll("//android.widget.TextView[@text='Continuar para revisão']")
+    scroll_android("//android.widget.TextView[@text='Continuar para revisão']")
     find_element(xpath: "//android.widget.TextView[@text='Continuar para revisão']").click
   end
 
   def finalizar_pedido
     find_element(xpath: "//android.widget.TextView[@text='Resumo do pedido']")
-    scroll("//android.widget.TextView[@text='Finalizar pedido']")
+    scroll_android("//android.widget.TextView[@text='Finalizar pedido']")
     find_element(xpath: "//android.widget.TextView[@text='Finalizar pedido']").click
   end
 
