@@ -63,7 +63,13 @@ end
 Dado("adiciono o CEP {string}") do |string|
   @screen.carrinho.adicionar_cep(string)
 end
-
+Dado("seleciono a  forma de pagamento como Nubank") do
+  @screen.checkout.forma_pagamento("Nubank")
+end
+Então("devo ver a view da Nubank") do
+  resultado = @screen.checkout.view_nubank
+  expect(resultado.displayed?).to be true
+end
 Então("devo ver a tela com a chave pix para pagamento") do
   resultado = @screen.checkout.chave_pix
   expect(resultado.displayed?).to be true
